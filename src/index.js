@@ -1,8 +1,11 @@
 import React, {createContext} from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import "./assets/style.css";
+import "./assets/css/style.css";
 import "bootstrap/dist/css/bootstrap.css"
+import "./assets/css/home.css"
+import "./assets/css/color.css"
+import "./assets/css/tailwind.css"
 import UserConstructor from "./constructor/userConstructor";
 export const Context = createContext(null);
 const root = ReactDOM.createRoot(document.getElementById('root'));

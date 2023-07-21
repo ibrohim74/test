@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import "../../../assets/saidbar.css"
 import {QuestionCircleOutlined} from "@ant-design/icons"
 import {Link} from "react-router-dom";
 import jwtDecode from "jwt-decode";

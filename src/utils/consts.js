@@ -8,6 +8,8 @@ export const REGISTRATION_ROUTE = '/registration';
 export const HIW_ROUTE = '/hiw';
 export const ADVANTAGES_ROUTE = '/advantages';
 
+
+
 export const PRIVATE_ROUTE1 = ADMIN_ROUTE+'/private1';
 export const PRIVATE_ROUTE2 = ADMIN_ROUTE+'/private2';
 export const PRIVATE_ROUTE3 ='/private3';

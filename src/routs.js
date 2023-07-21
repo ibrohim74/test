@@ -6,7 +6,7 @@ import {
     PRIVATE_ROUTE2,
     PRIVATE_ROUTE3,
     PRIVATE_ROUTE4,
-    PRIVATE_ROUTE5, PRIVATE_ROUTE6, REGISTRATION_ROUTE, USER_ROUTE
+    PRIVATE_ROUTE5, PRIVATE_ROUTE6, REGISTRATION_ROUTE, USER_ROUTE, USERCONTACTPAGE
 } from "./utils/consts";
 import Admin from "./pages/admin/admin";
 import Priv1 from "./pages/admin/priv1";
@@ -21,6 +21,7 @@ import Auth from "./pages/auth";
 import Hiw from "./pages/hiw";
 import Advantages from "./pages/advantages";
 import Layout from "./pages/admin/component/layout";
+import UserPageContact from "./pages/userPageContact";
 
 
 export const adminDash = [
@@ -57,13 +58,14 @@ export const adminDash = [
         path:PRIVATE_ROUTE6,
         Component:<Priv6/>
     }  ,
-]
-
+];
 export const publicRoute = [
     {
         path:HOME_ROUTE,
         Component:<Home/>
     }  ,
+
+
 
     {
         path:ABOUT_ROUTE,

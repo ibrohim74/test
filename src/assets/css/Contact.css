@@ -1,0 +1,98 @@
+
+
+*, *::before, *::after {
+    box-sizing: initial !important;
+}
+.contact {
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_box {
+    padding: 20px 30px 50px;
+    border-radius: 41px;
+    background: #ffffff;
+    box-shadow:
+        7px 7px 18px #adadad,
+        -7px -7px 18px #ffffff;
+    border-radius: 15px;
+    width: 240px;
+    height: 240px;
+    position: relative;
+}
+
+.contact_box-avatar {
+    text-align: center;
+    position: absolute;
+    top: -70px;
+    transform: translateX(-60px);
+    left: 50%;
+}
+
+.contact_box-avatar img {
+    width: 110px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.contact_box-avatar h4 {
+    font-weight: 700;
+    font-size: 24px;
+    margin: 15px 0 5px;
+}
+
+.contact_box-avatar h5 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.contact_box-description {
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+
+.contact_box-line {
+    display: flex;
+    align-items: center;
+}
+
+.contact_box-line svg {
+    font-size: 20px;
+}
+
+.contact_box-line p {
+    margin: 10px 7px;
+}
+
+.contact_box-line a {
+    transition: 0.2s;
+    text-decoration: none;
+    color: #000;
+    margin: 10px 7px;
+}
+
+.contact_box-line a:hover {
+    color: #2478F5;
+}
+
+.contact_box-social {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact_box-social svg {
+    color: #000;
+    font-size: 24px;
+    transition: 0.2s;
+}
+
+.contact_box-social svg:hover {
+    color: #2478F5;
+}
