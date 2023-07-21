@@ -1,72 +1,56 @@
-import React, { useState } from 'react';
-import {
-    MenuFoldOutlined,
-    MenuUnfoldOutlined,
-    UploadOutlined,
-    UserOutlined,
-    VideoCameraOutlined,
-} from '@ant-design/icons';
-import { Layout, Menu, Button, theme } from 'antd';
+import React, {useContext, useState} from 'react';
+import {Context} from "../../index";
+import Sidebar from "./component/sidebar";
+import Priv1 from "./priv1";
+import Priv2 from "./priv2";
+import Priv3 from "./priv3";
+import Priv4 from "./priv4";
+import { UserOutlined ,DashboardTwoTone,ShoppingTwoTone,EnvironmentTwoTone,DollarTwoTone,SettingTwoTone} from '@ant-design/icons';
+import { Avatar, Space } from 'antd';
+import jwt_decode from "jwt-decode";
+import {useNavigate,Routes , Route} from "react-router-dom"
 
-const { Header, Sider, Content } = Layout;
 const Admin = () => {
-    const [collapsed, setCollapsed] = useState(false);
-    const {
-        token: { colorBgContainer },
-    } = theme.useToken();
-    return (
-        <div style={{height:"100vh"}}>
-            <Layout className="content-admin">
-                <Sider trigger={null} collapsible collapsed={collapsed}>
-                    <div className="demo-logo-vertical" />
-                    <Menu
-                        theme="dark"
-                        mode="inline"
-                        defaultSelectedKeys={['1']}
-                        items={[
-                            {
-                                key: '1',
-                                icon: <UserOutlined />,
-                                label: 'nav 1',
-                            },
-                            {
-                                key: '2',
-                                icon: <VideoCameraOutlined />,
-                                label: 'nav 2',
-                            },
-                            {
-                                key: '3',
-                                icon: <UploadOutlined />,
-                                label: 'nav 3',
-                            },
-                        ]}
-                    />
-                </Sider>
-                <Layout>
-                    <Header style={{ padding: 0, background: "#001529" }}>
-                        <Button
-                            type="text"
-                            icon={collapsed ? <MenuUnfoldOutlined style={{color:"white"}}/> : <MenuFoldOutlined style={{color:"white"}}/>}
-                            onClick={() => setCollapsed(!collapsed)}
-                            style={{
-                                fontSize: '16px',
-                                width: 64,
-                                height: 64,
-                            }}
-                        />
-                    </Header>
-                    <Content
-                        style={{
+    const {user} = useContext(Context);
+    const navi = useNavigate();
+const logout = ()=>{
+        navi('/');
+    user.setUser({});
+    user.setIsAuth(false);
+    localStorage.clear()
+}
+    const getName = ()=> {
+        const token = localStorage.getItem('token');
+        const deToken = jwt_decode(token)
+        return "Welcome "+ deToken.email +" "+ deToken.role
+    }
 
-                            padding: 24,
-                            minHeight: 280,
-                            background: colorBgContainer,
-                        }}
-                    >
-                        Content
-                    </Content>
-                </Layout>
-            </Layout>
+
+    const [selectedItem, setSelectedItem] = useState(null);
+    const elementsSidebar = [
+        {icon:<DashboardTwoTone /> , item:'Dashboard'},
+        {icon:<ShoppingTwoTone /> , item:'Order'},
+        {icon:<EnvironmentTwoTone /> , item:'Addresses'},
+        {icon:<DollarTwoTone /> , item:'Payment method'},
+        {icon:<SettingTwoTone />, item:'Settings'}
+        ];
+
+    const layouts = [<Priv1 />, <Priv2 />, <Priv3 />, <Priv4 />];
+    return (
+        <div className={"adminPage"}>
+            <div className="said-bar">
+                <Sidebar items={elementsSidebar} onClickItem={setSelectedItem} />
+            </div>
+            <div className="header">
+                <button onClick={()=>logout()}>Logout</button>
+                {getName()}
+            </div>
+            <div className="content-adminPage">
+                {/*{selectedItem !== null && layouts[selectedItem]}*/}
+                <Routes>
+                    <Route element={<Priv1/>} path={'/priv'} />
+                </Routes>
+            </div>
         </div>
     );
 };

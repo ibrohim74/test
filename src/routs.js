@@ -1,5 +1,6 @@
+import React from "react";
 import {
-    ABOUT_ROUTE,
+    ABOUT_ROUTE, ADMIN_LAYOUT_ROUTE,
     ADMIN_ROUTE, ADVANTAGES_ROUTE, HIW_ROUTE, HOME_ROUTE, LOGIN_ROUTE,
     PRIVATE_ROUTE1,
     PRIVATE_ROUTE2,
@@ -19,19 +20,22 @@ import About from "./pages/about";
 import Auth from "./pages/auth";
 import Hiw from "./pages/hiw";
 import Advantages from "./pages/advantages";
+import Layout from "./pages/admin/component/layout";
 
-export const privateAuth  = [
+
+export const adminDash = [
     {
         path:ADMIN_ROUTE,
         Component:<Admin/>
     },
     {
-        path:USER_ROUTE,
-        Component:<Admin/>
+        path:"/layout",
+        Component:<Layout/>
     },
     {
         path:PRIVATE_ROUTE1,
         Component:<Priv1/>
+
     }  ,
     {
         path:PRIVATE_ROUTE2,
@@ -53,13 +57,14 @@ export const privateAuth  = [
         path:PRIVATE_ROUTE6,
         Component:<Priv6/>
     }  ,
-];
+]
 
 export const publicRoute = [
     {
         path:HOME_ROUTE,
         Component:<Home/>
     }  ,
+
     {
         path:ABOUT_ROUTE,
         Component:<About/>

@@ -1,25 +1,29 @@
-import React from 'react';
-import {BrowserRouter,Routes, Route, Navigate} from "react-router-dom";
-import Home from "../pages/home";
-import Auth from "../pages/auth";
-import Admin from "../pages/admin/admin";
-import {privateAuth, publicRoute} from "../routs";
+import React, {useContext} from 'react';
+import { Routes, Route} from "react-router-dom";
+import {Context} from "../index";
+import {adminDash, publicRoute} from "../routs";
+import {observer} from "mobx-react-lite";
 
-const AppRout = () => {
-    const isLogin = true;
-    return (
-        <div>
+
+
+    const AppRout = observer(() => {
+        const {user} = useContext(Context);
+
+        return (
             <Routes>
-                {
-                    isLogin && privateAuth.map(({path, Component})=><Route key={path} path={path} element={Component} exact/>)
-                }
-                {
-                  publicRoute.map(({path, Component})=><Route key={path} path={path} element={Component} exact/>)
-                }
-                <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
-        </div>
-    );
-};
 
-export default AppRout;
+                {
+                    publicRoute.map(({path, Component}) => <Route key={path} path={path} element={Component} exact/>)
+                }
+                {user.isAuth && adminDash.map(({path, Component}) => <Route key={path} path={path + "/*"} element={Component}/>)}
+
+
+                {/*<Route*/}
+                {/*    path="*"*/}
+                {/*    element={<Navigate to="/" replace />}*/}
+                {/*/>*/}
+            </Routes>
+        );
+    });
+
+    export default AppRout;
