@@ -16,10 +16,9 @@ import Priv4 from "./pages/admin/priv4";
 import Priv5 from "./pages/admin/priv5";
 import Priv6 from "./pages/admin/priv6";
 import Home from "./pages/home";
-import About from "./pages/about";
+
 import Auth from "./pages/auth";
-import Hiw from "./pages/hiw";
-import Advantages from "./pages/advantages";
+
 import Layout from "./pages/admin/component/layout";
 import UserPageContact from "./pages/userPageContact";
 
@@ -65,12 +64,6 @@ export const publicRoute = [
         Component:<Home/>
     }  ,
 
-
-
-    {
-        path:ABOUT_ROUTE,
-        Component:<About/>
-    }  ,
     {
         path:LOGIN_ROUTE,
         Component:<Auth/>
@@ -78,13 +71,5 @@ export const publicRoute = [
     {
         path:REGISTRATION_ROUTE,
         Component:<Auth/>
-    }  ,
-    {
-        path:HIW_ROUTE,
-        Component:<Hiw/>
-    }  ,
-    {
-        path:ADVANTAGES_ROUTE,
-        Component:<Advantages/>
     }  ,
 ];
