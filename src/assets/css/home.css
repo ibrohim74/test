@@ -27,7 +27,7 @@ img {
 }
 .container-landing {
   max-width: 1230px;
-  padding: 0 15px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 .navBar {
@@ -177,14 +177,14 @@ img {
   justify-content: center;
 }
 .func-type div {
-  width: 50%; /*was empty*/
+  width: 20rem; /*was empty*/
   margin-top: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background: #f3f3f3;
   padding: 5px;
-  border-radius: 20px;
+  border-radius: 32px;
 }
 .x {
   position: fixed;
@@ -192,11 +192,11 @@ img {
   right: 17px;
 }
 .func-type h3 {
-  border-radius: 20px;
+  border-radius: 28px;
   padding: 10px;
   margin: 0;
   height: 100%;
-  width: 50%;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -243,6 +243,12 @@ img {
   padding: 32px;
   border-radius: 20px;
 }
+/* 
+@media (max-width: 750px) {
+  .launch-item {
+    width: 85%;
+  }
+} */
 .launch-step {
   color: #2478f5;
   margin-bottom: 32px;
@@ -362,7 +368,7 @@ img {
     width: 100%;
   }
   .info-box .right-el {
-    text-align: center;
+    text-align: left; /*was center*/
   }
   .info-box {
     display: block;
@@ -418,7 +424,7 @@ footer {
   gap: 2.5rem; /* Equivalent to gap-10 */
   align-items: center; /* Equivalent to items-center */
   justify-content: center; /* Equivalent to justify-center */
-  padding: 0 1.25rem; /* Equivalent to md:px-5 */
+  /* padding: 0 1.25rem; Equivalent to md:px-5 */
   padding-top: 3.75rem; /* Equivalent to py-[60px] */
   padding-bottom: 3.75rem; /* Equivalent to py-[60px] */
   width: 100%; /* Equivalent to w-full */
@@ -429,6 +435,7 @@ footer {
   footer {
     flex-direction: column;
     gap: 1.25rem;
+    align-items: start;
     justify-content: flex-start;
   }
 }
@@ -441,6 +448,12 @@ footer {
   justify-content: center;
   width: 75%;
   max-width: 1080px;
+}
+
+@media (max-width: 550px) {
+  .footer-container {
+    width: 100%;
+  }
 }
 
 /* styles.css (or any other CSS file) */
