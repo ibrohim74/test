@@ -329,22 +329,42 @@ const Home = () => {
           <h1>Frequently asked questions</h1>
           <div className="answer-item">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p>
-            {/*<div className="answer-icon">*/}
-            {/*    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">*/}
-            {/*        <path d="M10.797 7.89836C10.7971 7.89856 10.7973 7.89876 10.7975 7.89896L10.797 7.89836ZM1 12C1 18.0757 5.92428 23 12 23C18.0757 23 23 18.0757 23 12C23 5.92428 18.0757 1 12 1C5.92428 1 1 5.92428 1 12Z" stroke="#2478F5" stroke-width="2"/>*/}
-            {/*    </svg>*/}
-            {/*</div>*/}
+            <div className="answer-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M10.797 7.89836C10.7971 7.89856 10.7973 7.89876 10.7975 7.89896L10.797 7.89836ZM1 12C1 18.0757 5.92428 23 12 23C18.0757 23 23 18.0757 23 12C23 5.92428 18.0757 1 12 1C5.92428 1 1 5.92428 1 12Z"
+                  stroke="#2478F5"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
           <div className="answer-item">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            {/*<div className="answer-icon">*/}
-            {/*    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">*/}
-            {/*        <path d="M10.797 7.89836C10.7971 7.89856 10.7973 7.89876 10.7975 7.89896L10.797 7.89836ZM1 12C1 18.0757 5.92428 23 12 23C18.0757 23 23 18.0757 23 12C23 5.92428 18.0757 1 12 1C5.92428 1 1 5.92428 1 12Z" stroke="#2478F5" stroke-width="2"/>*/}
-            {/*    </svg>*/}
-            {/*</div>*/}
+            <div className="answer-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M10.797 7.89836C10.7971 7.89856 10.7973 7.89876 10.7975 7.89896L10.797 7.89836ZM1 12C1 18.0757 5.92428 23 12 23C18.0757 23 23 18.0757 23 12C23 5.92428 18.0757 1 12 1C5.92428 1 1 5.92428 1 12Z"
+                  stroke="#2478F5"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
         <div className="say-box">

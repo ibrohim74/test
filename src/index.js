@@ -1,6 +1,8 @@
 import React, {createContext} from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import {BrowserRouter } from "react-router-dom";
+
 import "./assets/css/style.css";
 import "bootstrap/dist/css/bootstrap.css"
 import UserConstructor from "./constructor/userConstructor";
@@ -14,7 +16,8 @@ root.render(
     <Context.Provider value={{
         user:new UserConstructor(),
     }}>
-        <App />
+        <BrowserRouter>  <App /></BrowserRouter>
+
     </Context.Provider>
 </React.StrictMode>);
 
