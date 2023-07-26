@@ -139,16 +139,17 @@ img {
   height: 100%;
 }
 .info {
+  max-width: 1080px;
   margin-top: 60px;
 }
 .info-box {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 .info-box .right-el {
-  width: 40%;
+  width: 50%;
   text-align: left;
 }
 .info-box .right-el h1 {
@@ -162,14 +163,14 @@ img {
   line-height: 24px;
 }
 .info-box .left-el {
-  width: 40%;
+  width: 50%;
 }
 .function {
   margin-top: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  max-width: 1080px;
 }
 .func-title {
   text-align: center;

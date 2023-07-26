@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "../assets/css/home.css";
 import Question from "../component/question";
+import Slider from "../component/slider";
 const Home = () => {
   const [isActive, setIsActive] = useState(false);
   const [funcIsActive, setfuncIsActive] = useState(false);
@@ -96,7 +97,7 @@ const Home = () => {
           </div>
         </div>
         <div className="header-box">
-          <div className="header-landing">
+          {/* <div className="header-landing">
             <Carousel data-bs-theme="dark">
               <Carousel.Item>
                 <img
@@ -123,33 +124,9 @@ const Home = () => {
                 <Carousel.Caption></Carousel.Caption>
               </Carousel.Item>
             </Carousel>
-          </div>
+          </div> */}
         </div>
-        <div className="partners">
-          <h1>Trusted by industry leaders</h1>
-          <div className="partner-box">
-            <ul>
-              <li>
-                <img src={require("../assets/testImg/partnyor1.png")} alt="" />
-              </li>
-              <li>
-                <img src={require("../assets/testImg/partnyor2.png")} alt="" />
-              </li>
-
-              <li>
-                <img src={require("../assets/testImg/partnyor3.png")} alt="" />
-              </li>
-
-              <li>
-                <img src={require("../assets/testImg/partnyor4.png")} alt="" />
-              </li>
-
-              <li>
-                <img src={require("../assets/testImg/partnyor5.png")} alt="" />
-              </li>
-            </ul>
-          </div>
-        </div>
+        <Slider />
 
         <div className="info">
           <div className="info-box">
