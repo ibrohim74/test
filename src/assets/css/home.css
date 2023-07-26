@@ -303,6 +303,7 @@ img {
   margin-bottom: 32px;
 }
 .answer-item {
+  box-sizing: border-box !important;
   border-radius: 32px;
   display: flex;
   padding: 32px;
@@ -351,10 +352,11 @@ img {
 }
 
 .say-item {
+  box-sizing: border-box !important;
   width: 285px;
   background: #f3f3f3;
   padding: 28px;
-  border-radius: 28px;
+  border-radius: 32px;
 }
 .say-item h1 {
   margin-bottom: 20px;
@@ -364,11 +366,11 @@ img {
     flex-direction: column;
   }
   .say-item {
-    width: 80%;
+    width: 100%; /* was 80% */
     margin-bottom: 20px;
   }
   .answer-item {
-    width: 80%;
+    width: 100%; /* was 80% */
   }
   .func-box-content {
     flex-direction: column;
