@@ -1,71 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
-body{
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif !important;
+    font-family: "Rubik", sans-serif !important;
 }
-html{
+html {
     scroll-behavior: smooth;
 }
-ul{
+ul {
     padding: 0 !important;
     list-style: none;
     display: flex;
 }
-select{
+select {
     border: none;
     outline: none;
     background: transparent;
 }
-a{
+a {
     text-decoration: none !important;
 }
-img{
+img {
     width: 100%;
     height: 100%;
 }
-.container-landing{
+.container-landing {
+    display: flex; /*NEW*/
+    flex-direction: column; /*NEW*/
+    align-items: center; /*NEW*/
+    justify-content: center; /*NEW*/
     max-width: 1230px;
-    padding: 0 15px;
+    padding: 0 20px;
     margin: 0 auto;
 }
-.navBar{
+.navBar {
     width: 100%;
     height: 60px;
 }
-.carousel-inner{
+.carousel-inner {
     height: 100%;
 }
-.nav-box{
+.nav-box {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.nav-box a{
-    color:black;
+.nav-box a {
+    color: black;
 }
-.nav-component{
+.nav-component {
     transition: 0.9s ease-in;
     display: flex;
     align-items: center;
 }
-.nav-component select{
+.nav-component select {
     margin-right: 13px;
 }
-.nav-component .account{
+.nav-component .account {
     margin-right: 20px;
 }
-.nav-box ul li{
+.nav-box ul li {
     padding: 0 20px;
 }
-.menu{
+.menu {
     display: none;
 }
-.logo-nav{ z-index: 109}
-.header-landing{
+.logo-nav {
+    z-index: 109;
+}
+.header-landing {
     height: 56vh;
     background: aliceblue;
     width: 90%;
@@ -73,9 +79,8 @@ img{
     align-items: center;
     display: flex;
     border-radius: 20px;
-
 }
-.header-box{
+.header-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,211 +88,234 @@ img{
     margin-top: 20px;
     border-radius: 20px;
 }
-.carousel{
+.carousel {
     height: 100%;
     width: 100%;
 }
 
-.carousel-control-prev , .carousel-control-next{display: none !important;}
-.carousel-caption{
+.carousel-control-prev,
+.carousel-control-next {
+    display: none !important;
+}
+.carousel-caption {
     width: 50%;
-right: -38%;
+    right: -38%;
     top: 50%;
 }
-.carousel-item img{
-
-    width: 40%;}
-.carousel-item{
-   width: 100%;
-
+.carousel-item img {
+    width: 40%;
 }
-.partner-box ul{
+.carousel-item {
+    width: 100%;
+}
+.partner-box ul {
     width: 100%;
     flex-wrap: wrap;
     align-items: center;
-justify-content: center;
+    justify-content: center;
 }
-.partners{
+.partners {
     margin-top: 30px;
     text-align: center;
     font-weight: bold;
     font-size: 24px;
 }
-.partners h1{
+.partners h1 {
     text-align: center;
     font-weight: bold;
     font-size: 24px;
     margin-bottom: 20px;
 }
-.partner-box ul li{
+.partner-box ul li {
     width: 100px;
     margin-left: 40px;
 }
-.partner-box{
+.partner-box {
     margin-left: -29px;
 }
 
-.partner-box ul img{
+.partner-box ul img {
     width: 100%;
     height: 100%;
 }
-.info{
+.info {
     margin-top: 60px;
 }
-.info-box{
+.info-box {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
 }
-.info-box .right-el{
+.info-box .right-el {
     width: 40%;
     text-align: left;
 }
-.info-box .right-el h1{
+.info-box .right-el h1 {
     font-weight: bold;
     font-size: 36px;
     margin-bottom: 20px;
 }
-.info-box .right-el p{
+.info-box .right-el p {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
 }
-.info-box .left-el{
+.info-box .left-el {
     width: 40%;
 }
-.function{
+.function {
     margin-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
-.func-title{
+.func-title {
     text-align: center;
     width: 100%;
 }
-.func-type div{
+.func-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.func-type div {
+    width: 20rem; /*was empty*/
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: #F3F3F3;
+    background: #f3f3f3;
     padding: 5px;
-    border-radius: 20px;
+    border-radius: 32px;
 }
-.x{
+.x {
     position: fixed;
     top: 17px;
     right: 17px;
 }
-.func-type h3{
-    border-radius: 20px;
+.func-type h3 {
+    border-radius: 28px;
     padding: 10px;
     margin: 0;
     height: 100%;
-    width: 50%;
+    width: 100%;
     cursor: pointer;
 }
 
-.func-content{
+.func-content {
     margin-top: 60px;
     width: 100%;
 }
 
-.func-left{
+.func-left {
     display: flex;
     flex-direction: column;
-
 }
-.func-box-content{
+.func-box-content {
     display: flex;
     justify-content: space-around;
 }
-.func-left, .func-right{
+.func-left,
+.func-right {
     width: 50%;
 }
-.launch{
+.launch {
     margin-top: 100px;
-
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
 }
-.launch .launch-h1{
+@media (max-width: 1000px) {
+    .launch {
+        width: 100%;
+    }
+}
+
+.launch .launch-h1 {
     text-align: center;
 }
-.launch-box{
+.launch-box {
     margin-top: 50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.launch-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
     flex-direction: column;
     width: 100%;
+
+    max-width: 766px;
 }
-.launch-item{
+.launch-item {
+    box-sizing: border-box !important;
     margin-bottom: 28px;
-    width: 80%;
-    background: #F3F3F3;
+    width: 100%;
+    background: #f3f3f3;
     padding: 32px;
-    border-radius: 20px;
+    border-radius: 32px;
 }
-.launch-step{
-    color: #2478F5;
+/*
+@media (max-width: 750px) {
+  .launch-item {
+    width: 85%;
+  }
+} */
+.launch-step h3 {
+    font-size: 1rem;
+    color: #2478f5;
     margin-bottom: 32px;
 }
-.launch-titel{
-    font-size: 24px;
+.launch-titel h1 {
+    font-size: 2rem;
     font-weight: 500;
     line-height: 28px;
 }
-.launch-text{
+.launch-text {
     margin-top: 20px;
     font-size: 16px;
 }
-.launch-btn{
-    margin-top: 30px;
+.launch-btn {
+    /* margin-top: 30px; */
 }
-.launch-btn a{
+.launch-btn a {
     font-weight: 500;
     border-radius: 32px;
     color: black;
     padding: 16px;
     width: 170px;
     height: 24px;
-    background: #B8FF65;
+    background: #b8ff65;
 }
 
-.answer{
+.answer {
     margin-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.answer h1{
+.answer h1 {
     text-align: center;
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 32px;
 }
-.answer-item{
+.answer-item {
     border-radius: 32px;
-display: flex;
+    display: flex;
     padding: 32px;
     justify-content: space-around;
     align-items: center;
     width: 702px;
-    background: #F3F3F3;
+    background: #f3f3f3;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     margin-bottom: 20px;
 }
-.answer-item p{
+.answer-item p {
     margin: 0;
     width: 100%;
 }
@@ -300,7 +328,7 @@ display: flex;
 /*    transform: rotate(180deg);*/
 /*}*/
 
-.say-box{
+.say-box {
     margin-top: 70px;
     width: 100%;
     display: flex;
@@ -308,13 +336,13 @@ display: flex;
     align-items: center;
     flex-direction: column;
 }
-.say-title{
+.say-title {
     font-size: 36px;
     margin-bottom: 20px;
     font-weight: 600;
     line-height: 44px;
 }
-.say{
+.say {
     margin-top: 29px;
     width: 100%;
     display: flex;
@@ -322,73 +350,74 @@ display: flex;
     align-items: center;
 }
 
-.say-item{
+.say-item {
     width: 285px;
     background: #f3f3f3;
     padding: 28px;
     border-radius: 28px;
 }
-.say-item h1{
+.say-item h1 {
     margin-bottom: 20px;
 }
 @media screen and (max-width: 750px) {
-    .say{
+    .say {
         flex-direction: column;
     }
-    .say-item{
+    .say-item {
         width: 80%;
         margin-bottom: 20px;
     }
-    .answer-item{
+    .answer-item {
         width: 80%;
     }
-    .func-box-content{
+    .func-box-content {
         flex-direction: column;
     }
-    .func-left, .func-right{
+    .func-left,
+    .func-right {
         width: 100%;
     }
-    .info-box .right-el , .info-box .left-el{
+    .info-box .right-el,
+    .info-box .left-el {
         width: 100%;
     }
-    .info-box .right-el{
-        text-align: center;
+    .info-box .right-el {
+        text-align: left; /*was center*/
     }
-    .info-box{
+    .info-box {
         display: block;
     }
-    .nav-box{
+    .nav-box {
         justify-content: space-between;
     }
-    .menu{
+    .menu {
         display: block;
         z-index: 99;
     }
-    .header-landing{
+    .header-landing {
         height: 30vh;
         width: 90%;
     }
-    .carousel-item img{
-
-        width: 75%;}
-.nav-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #F9F9F9;
-    z-index: 99;
-    right: -100%;
-}
-.nav-content.active {
-    right: 0;
-    bottom: 0;
-    transition: 0.7s ease-in;
-
-}
-    .nav-content ul{
+    .carousel-item img {
+        width: 75%;
+    }
+    .nav-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #f9f9f9;
+        z-index: 99;
+        right: -100%;
+    }
+    .nav-content.active {
+        right: 0;
+        bottom: 0;
+        transition: 0.7s ease-in;
+    }
+    .nav-content ul {
         display: flex;
         flex-direction: column;
         font-size: 25px;
@@ -398,10 +427,9 @@ display: flex;
         align-items: center;
         position: absolute;
     }
-    .nav-content ul li{
+    .nav-content ul li {
         margin-bottom: 30px;
     }
-
 }
 /* footer.css */
 /* styles.css (or any other CSS file) */
@@ -410,7 +438,7 @@ footer {
     gap: 2.5rem; /* Equivalent to gap-10 */
     align-items: center; /* Equivalent to items-center */
     justify-content: center; /* Equivalent to justify-center */
-    padding: 0 1.25rem; /* Equivalent to md:px-5 */
+    /* padding: 0 1.25rem; Equivalent to md:px-5 */
     padding-top: 3.75rem; /* Equivalent to py-[60px] */
     padding-bottom: 3.75rem; /* Equivalent to py-[60px] */
     width: 100%; /* Equivalent to w-full */
@@ -421,6 +449,7 @@ footer {
     footer {
         flex-direction: column;
         gap: 1.25rem;
+        align-items: start;
         justify-content: flex-start;
     }
 }
@@ -433,6 +462,12 @@ footer {
     justify-content: center;
     width: 75%;
     max-width: 1080px;
+}
+
+@media (max-width: 550px) {
+    .footer-container {
+        width: 100%;
+    }
 }
 
 /* styles.css (or any other CSS file) */

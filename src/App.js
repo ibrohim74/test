@@ -1,5 +1,5 @@
 
-import {BrowserRouter as Router} from "react-router-dom";
+import {BrowserRouter } from "react-router-dom";
 import {observer} from "mobx-react-lite";
 import React, {useContext, useEffect, useState} from "react";
 import {Context} from "./index";
@@ -24,9 +24,9 @@ const App =observer( () => {
     return (
         <>
 
-<Router>
+<>
     <AppRout/>
-</Router>
+</>
 
 
     </>);
