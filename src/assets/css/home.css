@@ -289,37 +289,50 @@ img {
   background: #b8ff65;
 }
 
-.answer {
+.faq {
   margin-top: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.answer h1 {
+.faq h1 {
   text-align: center;
   font-size: 36px;
   font-weight: 600;
   margin-bottom: 32px;
 }
-.answer-item {
-  box-sizing: border-box !important;
-  border-radius: 32px;
+
+/* flex flex-col gap-8 items-start justify-start max-w-[766px] w-full */
+.faq-container {
   display: flex;
-  padding: 32px;
-  justify-content: space-around;
-  align-items: center;
-  width: 702px;
-  background: #f3f3f3;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  margin-bottom: 20px;
-}
-.answer-item p {
-  margin: 0;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: start;
+  justify-content: start;
+  max-width: 766px;
   width: 100%;
 }
+
+/* bg-gray-100 flex flex-col items-center justify-center p-8 sm:px-5 rounded-[28px] w-full */
+.faq-item {
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 28px;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .faq-item {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
 /*.answer-icon{*/
 /*    height: 100%;*/
 /*    float: right;*/
@@ -462,11 +475,11 @@ footer {
   gap: 2.5rem;
   align-items: center;
   justify-content: center;
-  width: 75%;
+  width: 90%;
   max-width: 1080px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 1050px) {
   .footer-container {
     width: 100%;
   }
@@ -537,7 +550,7 @@ footer {
   gap: 1.5rem; /* Equivalent to gap-6 */
   align-items: flex-start; /* Equivalent to items-start */
   justify-content: flex-start; /* Equivalent to justify-start */
-  width: auto; /* Equivalent to w-auto */
+  width: 30%; /* Equivalent to w-auto */
 }
 
 /* styles.css (or any other CSS file) */

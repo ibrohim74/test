@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "../assets/css/home.css";
+import Question from "../component/question";
 const Home = () => {
   const [isActive, setIsActive] = useState(false);
   const [funcIsActive, setfuncIsActive] = useState(false);
@@ -11,6 +12,20 @@ const Home = () => {
     setfuncIsActive((current) => !current);
   };
   console.log(funcIsActive);
+
+  const faqs = [
+    {
+      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit",
+    },
+    {
+      question:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+  ];
 
   return (
     <>
@@ -325,46 +340,20 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="answer">
+        <div className="faq">
           <h1>Frequently asked questions</h1>
-          <div className="answer-item">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p>
-            <div className="answer-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M10.797 7.89836C10.7971 7.89856 10.7973 7.89876 10.7975 7.89896L10.797 7.89836ZM1 12C1 18.0757 5.92428 23 12 23C18.0757 23 23 18.0757 23 12C23 5.92428 18.0757 1 12 1C5.92428 1 1 5.92428 1 12Z"
-                  stroke="#2478F5"
-                  stroke-width="2"
-                />
-              </svg>
-            </div>
-          </div>
-          <div className="answer-item">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <div className="answer-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M10.797 7.89836C10.7971 7.89856 10.7973 7.89876 10.7975 7.89896L10.797 7.89836ZM1 12C1 18.0757 5.92428 23 12 23C18.0757 23 23 18.0757 23 12C23 5.92428 18.0757 1 12 1C5.92428 1 1 5.92428 1 12Z"
-                  stroke="#2478F5"
-                  stroke-width="2"
-                />
-              </svg>
-            </div>
+          <div //flex flex-col gap-8 items-start justify-start max-w-[766px] w-full
+            className="faq-container"
+          >
+            {faqs.map((faq, index) => (
+              <Question
+                // deleted this:  gap-8
+                // bg-gray-100 flex flex-col items-center justify-center p-8 sm:px-5 rounded-[28px] w-full
+                className="faq-item"
+                faq={faq}
+                key={index}
+              />
+            ))}
           </div>
         </div>
         <div className="say-box">
