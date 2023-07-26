@@ -300,10 +300,9 @@ const Home = () => {
                 </p>
               </div>
             </div>
-
-            <div className="launch-btn">
-              <a href="#">Get started today</a>
-            </div>
+          </div>
+          <div className="launch-btn">
+            <a href="#">Get started today</a>
           </div>
         </div>
 
