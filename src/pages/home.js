@@ -334,32 +334,6 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <div className="say-box">
-          <div className="say-title ">What people say</div>
-          <div className="say">
-            <div className="say-item">
-              <h1>Heading</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-            <div className="say-item">
-              <h1>Heading</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-            <div className="say-item">
-              <h1>Heading</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-        </div>
         <Wpsay />
         <footer style={{ fontFamily: "Rubik" }}>
           <div className="footer-container">
