@@ -26,7 +26,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-
+  width: 100vw;
   background-image: linear-gradient(
     to bottom,
     #ffffff 45%,
@@ -47,15 +47,20 @@
 }
 
 @media screen and (max-width: 750px) {
-  /* .contact-box {
+  .contact-box {
     height: 100%;
     border-radius: 0;
-    width: 100%;
-  } */
-  /* .container:first-of-type {
+    /* width: 100vw !important; */
+  }
+  .container {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 100vw !important;
+  }
+  .container:first-of-type {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-  } */
+  }
 }
 
 .contact-top {

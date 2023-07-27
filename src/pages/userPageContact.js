@@ -288,30 +288,38 @@ const UserPageContact = (data) => {
             </div>
           </div>
         </div>
-
-        <div className="contact-navbar">
-          <div
-            key="1"
-            onClick={() => handleNavBtnClick("1")}
-            className={`${activeNav === "1" ? "active-nav" : ""} navbar-button`}
-          >
-            <span>Contact</span>
-          </div>
-          <div
-            key="1"
-            onClick={() => handleNavBtnClick("2")}
-            className={`${activeNav === "2" ? "active-nav" : ""} navbar-button`}
-          >
-            <span>Company</span>
-          </div>
-          <div
-            key="1"
-            onClick={() => handleNavBtnClick("3")}
-            className={`${activeNav === "3" ? "active-nav" : ""} navbar-button`}
-          >
-            <span>Socials</span>
+        <div className="container">
+          <div className="contact-navbar">
+            <div
+              key="1"
+              onClick={() => handleNavBtnClick("1")}
+              className={`${
+                activeNav === "1" ? "active-nav" : ""
+              } navbar-button`}
+            >
+              <span>Contact</span>
+            </div>
+            <div
+              key="1"
+              onClick={() => handleNavBtnClick("2")}
+              className={`${
+                activeNav === "2" ? "active-nav" : ""
+              } navbar-button`}
+            >
+              <span>Company</span>
+            </div>
+            <div
+              key="1"
+              onClick={() => handleNavBtnClick("3")}
+              className={`${
+                activeNav === "3" ? "active-nav" : ""
+              } navbar-button`}
+            >
+              <span>Socials</span>
+            </div>
           </div>
         </div>
+
         <div className="container">
           <div className="contact-info">
             {activeNav === "1" && contactContent}
