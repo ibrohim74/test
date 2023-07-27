@@ -3,6 +3,7 @@ import Carousel from "react-bootstrap/Carousel";
 import "../assets/css/home.css";
 import Question from "../component/question";
 import Slider from "../component/slider";
+import Wpsay from "../component/wps";
 const Home = () => {
   const [isActive, setIsActive] = useState(false);
   const [funcIsActive, setfuncIsActive] = useState(false);
@@ -359,6 +360,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <Wpsay />
         <footer style={{ fontFamily: "Rubik" }}>
           <div className="footer-container">
             <div className="footer-main">
