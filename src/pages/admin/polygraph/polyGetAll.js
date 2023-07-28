@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Priv3 = () => {
+const PolyGetAll = () => {
     return (
         <div>
-            priv3
+            PolyGetAll
         </div>
     );
 };
 
-export default Priv3;
+export default PolyGetAll;

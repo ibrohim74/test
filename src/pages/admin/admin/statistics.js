@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Priv2 = () => {
+const Statistics = () => {
     return (
         <div>
-            Priv2
+            Statistics
         </div>
     );
 };
 
-export default Priv2;
+export default Statistics;

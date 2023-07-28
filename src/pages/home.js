@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "../assets/css/home.css";
+import {Link} from "react-router-dom";
+import {LOGIN_ROUTE} from "../utils/consts";
 const Home = () => {
     const [isActive, setIsActive] = useState(false);
     const [funcIsActive, setfuncIsActive] = useState(false);
@@ -41,7 +43,7 @@ const Home = () => {
                                 <option value="en">En</option>
                             </select>
 
-                            <div className="account">
+                            <Link to={LOGIN_ROUTE} className="account">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="16"
@@ -54,7 +56,7 @@ const Home = () => {
                                         fill="black"
                                     />
                                 </svg>
-                            </div>
+                            </Link>
                             <div className="menu" onClick={handleClick}>
                                 {isActive ? (
                                     <svg

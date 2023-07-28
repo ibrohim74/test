@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Priv6 = () => {
+const UserDevise = () => {
     return (
         <div>
-            Priv6
+            UserDevise
         </div>
     );
 };
 
-export default Priv6;
+export default UserDevise;

@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Priv4 = () => {
+const UserOrder = () => {
     return (
         <div>
-            PRIV4
+            userOrder
         </div>
     );
 };
 
-export default Priv4;
+export default UserOrder;

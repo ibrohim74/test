@@ -1,63 +1,33 @@
 import React from "react";
 import {
-    ABOUT_ROUTE, ADMIN_LAYOUT_ROUTE,
-    ADMIN_ROUTE, ADVANTAGES_ROUTE, HIW_ROUTE, HOME_ROUTE, LOGIN_ROUTE,
-    PRIVATE_ROUTE1,
-    PRIVATE_ROUTE2,
-    PRIVATE_ROUTE3,
-    PRIVATE_ROUTE4,
-    PRIVATE_ROUTE5, PRIVATE_ROUTE6, REGISTRATION_ROUTE, USER_ROUTE, USERCONTACTPAGE
+    ADMIN_ROUTE,
+    COMPANY_DEVISE, DEVISE_POLY,
+    DEVISE_USER, EDIT_ALL_USER, GET_ORDERS,
+    HOME_ROUTE,
+    LAYOUT,
+    LOGIN_ROUTE,
+    ORDER_USER, ORDERS_MANAGER, PROFILE_ADMIN, PROFILE_COMPANY,
+    PROFILE_USER,
+    REGISTRATION_ROUTE, STATISTIC, USER_LIST
 } from "./utils/consts";
 import Admin from "./pages/admin/admin";
-import Priv1 from "./pages/admin/priv1";
-import Priv2 from "./pages/admin/priv2";
-import Priv3 from "./pages/admin/priv3";
-import Priv4 from "./pages/admin/priv4";
-import Priv5 from "./pages/admin/priv5";
-import Priv6 from "./pages/admin/priv6";
 import Home from "./pages/home";
+import Login from "./pages/login";
+import Registration from "./pages/registration";
+import UserProfile from "./pages/admin/user/userProfile";
+import UserDevise from "./pages/admin/user/userDevise";
+import UserOrder from "./pages/admin/user/userOrder";
+import CompanyDevise from "./pages/admin/company/companyDevise";
+import CompanyOrders from "./pages/admin/company/companyOrders";
+import CompanyProfile from "./pages/admin/company/companyProfile";
+import CompanyUserList from "./pages/admin/company/companyUserList";
+import AdminProfile from "./pages/admin/admin/adminProfile";
+import EditAllUser from "./pages/admin/admin/editAllUser";
+import Statistics from "./pages/admin/admin/statistics";
+import PolyDevise from "./pages/admin/polygraph/polyDevise";
+import PolyGetAll from "./pages/admin/polygraph/polyGetAll";
 
-import Auth from "./pages/auth";
 
-import Layout from "./pages/admin/component/layout";
-import UserPageContact from "./pages/userPageContact";
-
-
-export const adminDash = [
-    {
-        path:ADMIN_ROUTE,
-        Component:<Admin/>
-    },
-    {
-        path:"/layout",
-        Component:<Layout/>
-    },
-    {
-        path:PRIVATE_ROUTE1,
-        Component:<Priv1/>
-
-    }  ,
-    {
-        path:PRIVATE_ROUTE2,
-        Component:<Priv2/>
-    }  ,
-    {
-        path:PRIVATE_ROUTE3,
-        Component:<Priv3/>
-    }  ,
-    {
-        path:PRIVATE_ROUTE4,
-        Component:<Priv4/>
-    }  ,
-    {
-        path:PRIVATE_ROUTE5,
-        Component:<Priv5/>
-    }  ,
-    {
-        path:PRIVATE_ROUTE6,
-        Component:<Priv6/>
-    }  ,
-];
 export const publicRoute = [
     {
         path:HOME_ROUTE,
@@ -66,10 +36,84 @@ export const publicRoute = [
 
     {
         path:LOGIN_ROUTE,
-        Component:<Auth/>
+        Component:<Login/>
     }  ,
     {
         path:REGISTRATION_ROUTE,
-        Component:<Auth/>
+        Component:<Registration/>
     }  ,
 ];
+
+export const adminDash = [
+    {
+        path:ADMIN_ROUTE,
+        Component:<Admin/>
+    },
+];
+
+export const userRoute = [
+    {
+        path:PROFILE_USER,
+        Component:<UserProfile/>
+    },
+    {
+        path:DEVISE_USER,
+        Component:<UserDevise/>
+    },
+    {
+        path:ORDER_USER,
+        Component:<UserOrder/>
+    },
+];
+
+export const companyRoute = [
+    {
+        path:COMPANY_DEVISE,
+        Component:<CompanyDevise/>
+    },
+    {
+        path:ORDERS_MANAGER,
+        Component:<CompanyOrders/>
+    },
+    {
+        path:PROFILE_COMPANY,
+        Component:<CompanyProfile/>
+    },
+    {
+        path:USER_LIST,
+        Component:<CompanyUserList/>
+    },
+];
+
+export const adminRoute = [
+    {
+        path:PROFILE_ADMIN,
+        Component:<AdminProfile/>
+    },
+    {
+        path:EDIT_ALL_USER,
+        Component:<EditAllUser/>
+    },
+    {
+        path:STATISTIC,
+        Component:<Statistics/>
+    },
+];
+
+export const polyRoute = [
+    {
+        path:DEVISE_POLY,
+        Component:<PolyDevise />
+    }  ,
+    {
+        path:GET_ORDERS,
+        Component:<PolyGetAll />
+    }
+];
+
+/* type :
+*        -Regular - oddiy user,
+*        -Admin - Admin ,
+*        -Company - Mananger Company
+*        -Polygraphy - polygraphiya
+* */

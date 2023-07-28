@@ -1,13 +1,8 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {QuestionCircleOutlined} from "@ant-design/icons"
 import {Link} from "react-router-dom";
 import jwtDecode from "jwt-decode";
-const Sidebar = ({items, onClickItem}) => {
-    const [active, setActive] = useState(false);
-
-    const user = ()=>{
-
-    }
+const Sidebar = ({type}) => {
     return (
         <div className='sidebar'>
             <div className="logo-sidebar"><h1>Logo</h1></div>

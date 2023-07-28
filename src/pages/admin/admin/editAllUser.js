@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Priv5 = () => {
+const EditAllUser = () => {
     return (
         <div>
-            Priv5
+            EditAllUser
         </div>
     );
 };
 
-export default Priv5;
+export default EditAllUser;

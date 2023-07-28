@@ -9,14 +9,14 @@ import {data} from "./db";
 
 const AppRout = observer(() => {
         const {user} = useContext(Context);
-
+        const local = localStorage.getItem('uuid');
         return (
             <Routes>
 
                 {
                     publicRoute.map(({path, Component}) => <Route key={path} path={path} element={Component} exact/>)
                 }
-                {user.isAuth && adminDash.map(({path, Component}) => <Route key={path} path={path + "/*"} element={Component}/>)}
+                {local && adminDash.map(({path, Component}) => <Route key={path} path={path + "/*"} element={Component}/>)}
 
                 {data.map( item =>
                     <Route key={item.id} exact path={`/userContact/${item.id}`} element={<UserPageContact data={item} />} />
