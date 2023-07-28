@@ -14,7 +14,7 @@ const Wpsay = (props) => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    // pauseOnHover: true,
+    pauseOnHover: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -39,7 +39,7 @@ const Wpsay = (props) => {
         <Slider {...settings} id="slider">
           <div className="wpsay-item">
             <div className="wpsay-container">
-              <h1>Heading 1</h1>
+              <h1>Review</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -48,7 +48,7 @@ const Wpsay = (props) => {
           </div>
           <div className="wpsay-item">
             <div className="wpsay-container">
-              <h1>Heading 2</h1>
+              <h1>Review</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -57,7 +57,7 @@ const Wpsay = (props) => {
           </div>
           <div className="wpsay-item">
             <div className="wpsay-container">
-              <h1>Heading 3</h1>
+              <h1>Review</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -66,7 +66,7 @@ const Wpsay = (props) => {
           </div>
           <div className="wpsay-item">
             <div className="wpsay-container">
-              <h1>Heading 4</h1>
+              <h1>Review</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.

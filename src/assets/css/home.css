@@ -25,6 +25,10 @@ img {
   width: 100%;
   height: auto;
 }
+h1 {
+  line-height: 2.75rem;
+  font-size: 2.25rem;
+}
 .container-landing {
   display: flex; /*NEW*/
   flex-direction: column; /*NEW*/
@@ -123,8 +127,9 @@ img {
 .partners h1 {
   text-align: center;
   font-weight: bold;
-  font-size: 24px;
   margin-bottom: 20px;
+  line-height: 2.75rem;
+  font-size: 2.25rem;
 }
 .partner-box ul li {
   width: 100px;
@@ -154,7 +159,8 @@ img {
 }
 .info-box .right-el h1 {
   font-weight: bold;
-  font-size: 36px;
+  /* font-size: 36px; */
+  font-size: 2.25rem;
   margin-bottom: 20px;
 }
 .info-box .right-el p {
@@ -175,6 +181,10 @@ img {
 .func-title {
   text-align: center;
   width: 100%;
+}
+.func-title h1 {
+  font-size: 2.25rem;
+  font-weight: bold;
 }
 .func-type {
   display: flex;
@@ -197,6 +207,8 @@ img {
   right: 17px;
 }
 .func-type h3 {
+  font-size: 1rem;
+  font-weight: bold;
   border-radius: 28px;
   padding: 10px;
   margin: 0;
@@ -206,13 +218,24 @@ img {
 }
 
 .func-content {
-  margin-top: 60px;
+  /* margin-top: 60px; */
   width: 100%;
 }
 
 .func-left {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+.func-left-el h1 {
+  padding-top: 1rem;
+  font-size: 2rem;
+  line-height: 2.75rem;
+  font-weight: bold;
+}
+.func-left-el p {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .func-box-content {
   display: flex;
@@ -270,16 +293,17 @@ img {
   margin-bottom: 32px;
 }
 .launch-titel h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 1.75rem;
 }
 .launch-text {
   margin-top: 20px;
   font-size: 16px;
 }
 .launch-btn {
-  /* margin-top: 30px; */
+  box-sizing: border-box !important;
+  /* margin-top: 10px; */
 }
 .launch-btn a {
   font-weight: 500;

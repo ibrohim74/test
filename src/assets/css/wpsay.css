@@ -24,3 +24,7 @@
   box-sizing: content-box;
   padding: 28px;
 }
+.wpsay-container h1 {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}

@@ -17,13 +17,47 @@ const Home = () => {
 
   const faqs = [
     {
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+      question: "What's a Site?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit",
     },
     {
-      question:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?",
+      question: "What can I link to on my Site?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      question: "Where can I share my Site?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      question: "How do I update my link in my social media bios?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      question: "What if I need more than one Site?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      question: "Are Sites free?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      question: 'What is a "link in bio"?',
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      question: "How do I put a link in my Tiktok and Instagram bio?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      question: "Where else can I share my link in bio  ?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
@@ -171,66 +205,51 @@ const Home = () => {
                 {funcIsActive ? (
                   <div className="func-left">
                     <div className="func-left-el">
-                      <h1>
-                        Create and customize your digital profile in minutes123.
-                      </h1>
+                      <h1>Sustainable</h1>
                       <p>
-                        Our product is designed to simplify the way you share
-                        all the necessary information about yourself with
-                        others.
+                        When an employee leaves, you can reuse the card with new
+                        employees, reducing waste and costs.
                       </p>
                     </div>
                     <div className="func-left-el">
-                      <h1>
-                        Create and customize your digital profile in minutes.
-                      </h1>
+                      <h1>Track your cards</h1>
                       <p>
-                        Our product is designed to simplify the way you share
-                        all the necessary information about yourself with
-                        others.
+                        Track your analytics and the number of people who have
+                        viewed profiles to generate more leads.
                       </p>
                     </div>
                     <div className="func-left-el">
-                      <h1>
-                        Create and customize your digital profile in minutes.
-                      </h1>
+                      <h1>Stand out with innovation </h1>
                       <p>
-                        Our product is designed to simplify the way you share
-                        all the necessary information about yourself with
-                        others.
+                        Whatever you do, whatever you're into. Share it and
+                        engage your audience by unifying them in one place, all
+                        from the link in the bio.
                       </p>
                     </div>
                   </div>
                 ) : (
                   <div className="func-left">
                     <div className="func-left-el">
-                      <h1>
-                        Create and customize your digital profile in minutes.
-                      </h1>
+                      <h1>Share the way you want</h1>
                       <p>
-                        Our product is designed to simplify the way you share
-                        all the necessary information about yourself with
-                        others.
+                        You can share your profile and content in multiple ways,
+                        including NFC tap, QR code, or Link through the
+                        internet.
                       </p>
                     </div>
                     <div className="func-left-el">
-                      <h1>
-                        Create and customize your digital profile in minutes.
-                      </h1>
+                      <h1>Save paper cards</h1>
                       <p>
-                        Our product is designed to simplify the way you share
-                        all the necessary information about yourself with
-                        others.
+                        Take photo of paper cards handed to you in the events
+                        and save them in the app, keep all cards in one place.
                       </p>
                     </div>
                     <div className="func-left-el">
-                      <h1>
-                        Create and customize your digital profile in minutes.
-                      </h1>
+                      <h1>Manage your profile</h1>
                       <p>
-                        Our product is designed to simplify the way you share
-                        all the necessary information about yourself with
-                        others.
+                        Edit, update, and schedule content with our quick, easy
+                        editor and seamlessly connect your Site with the tools
+                        you already use.
                       </p>
                     </div>
                   </div>
@@ -250,7 +269,7 @@ const Home = () => {
           <div className="launch-box">
             <div className="launch-item">
               <div className="launch-step">
-                <h3>Step 01</h3>
+                <h3>STEP 01</h3>
               </div>
               <div className="launch-titel">
                 <h1>Click on the 'Get started' button and fill out the form</h1>
@@ -265,7 +284,7 @@ const Home = () => {
             </div>
             <div className="launch-item">
               <div className="launch-step">
-                <h3>Step 02</h3>
+                <h3>STEP 02</h3>
               </div>
               <div className="launch-titel">
                 <h1>Set up your profile</h1>
@@ -280,7 +299,7 @@ const Home = () => {
             </div>
             <div className="launch-item">
               <div className="launch-step">
-                <h3>Step 03</h3>
+                <h3>STEP 03</h3>
               </div>
               <div className="launch-titel">
                 <h1>All set and ready!</h1>
