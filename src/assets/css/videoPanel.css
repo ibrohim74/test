@@ -1,0 +1,116 @@
+/* flex flex-col items-center justify-center sm:m-[] sm:mb-[] sm:ml-[] sm:mr-[] sm:mt-[] sm:p-[] pt-16 sm:px-5 w-full */
+/* <div className="videoPanel"> */
+.videoPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 64px;
+  width: 100%;
+  background-color: red;
+}
+@media screen and (max-width: 750px) {
+  .videoPanel {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* bg-gray-100 flex flex-col h-[600px] md:h-auto items-center justify-center max-w-[1080px] p-7 sm:rounded-[64px] rounded-[80px] w-full
+<div className="video-container"> */
+
+.video-container {
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  max-width: 1080px;
+  width: 100%;
+  border-radius: 64px;
+}
+@media screen and (max-width: 1000px) {
+  .video-container {
+    height: auto;
+  }
+}
+
+/* flex flex-col gap-12 h-full items-start sm:items-start justify-center w-full
+<div className="video-box"> */
+.video-box {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  height: 100%;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+}
+
+/* flex flex-col items-start justify-start w-full
+<div className="title-container"> */
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  width: 100%;
+}
+
+/* leading-[44.00px] max-w-[498px] md:max-w-full text-4xl sm:text-[32px] md:text-[34px] text-black-900
+className="video-title" */
+.video-title {
+  line-height: 2.75rem;
+  max-width: 498px;
+  font-size: 2.25rem;
+  color: #111827;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+}
+@media screen and (max-width: 1000px) {
+  .video-title {
+    font-size: 2.125rem;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .video-title {
+    font-size: 2rem;
+  }
+}
+
+/* flex sm:flex-col flex-row gap-8 items-center justify-start w-auto sm:w-full
+<div className="v-btns-container"> */
+.v-btns-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+@media screen and (max-width: 750px) {
+  .v-btns-container {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/* bg-light_green-A200 cursor-pointer font-inter font-semibold min-w-[157px] py-[15px] rounded-[28px] text-black-900 text-center text-xl
+className="v-start-btn" */
+.v-start-btn {
+  background-color: #b8ff65;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  min-width: 157px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 28px;
+  color: #111827;
+  text-align: center;
+  font-size: 1.25rem; /* 20px */
+}

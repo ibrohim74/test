@@ -4,6 +4,7 @@ import "../assets/css/home.css";
 import Question from "../component/question";
 import Slider from "../component/slider";
 import Wpsay from "../component/wpsay";
+import VideoPanel from "../component/videoPanel";
 const Home = () => {
   const [isActive, setIsActive] = useState(false);
   const [funcIsActive, setfuncIsActive] = useState(false);
@@ -131,8 +132,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="header-box">
-          {/* <div className="header-landing">
+        {/* <div className="header-box">
+          <div className="header-landing">
             <Carousel data-bs-theme="dark">
               <Carousel.Item>
                 <img
@@ -159,8 +160,10 @@ const Home = () => {
                 <Carousel.Caption></Carousel.Caption>
               </Carousel.Item>
             </Carousel>
-          </div> */}
-        </div>
+          </div>
+        </div> */}
+        <VideoPanel />
+
         <Slider />
 
         <div className="info">
