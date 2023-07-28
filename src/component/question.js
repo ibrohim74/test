@@ -15,7 +15,8 @@ const Question = (props) => {
         className={`${props.className}`}
         onClick={handleClick}
         id={props.id}
-        style={{ cursor: `${showAnswer ? "zoom-out" : "zoom-in"}` }}
+        // style={{ cursor: `${showAnswer ? "zoom-out" : "zoom-in"}` }}
+        style={{ cursor: "pointer" }}
       >
         {/* deleted: sm:flex-col */}
         {/* flex  flex-row gap-8 items-center justify-center  sm:px-5 rounded-[28px] w-full */}

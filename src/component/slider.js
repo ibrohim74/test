@@ -25,16 +25,18 @@ const Slider = (props) => {
     <>
       <div className="partners">
         <h1>Trusted by industry leaders</h1>
-        <section class="clients">
-          <div class="slider">
-            <div class="slider-track">
-              {slides}
-              {slides}
-              {slides}
-              {slides}
+        <div className="clients-container">
+          <section className="clients">
+            <div className="slider">
+              <div className="slider-track">
+                {slides}
+                {slides}
+                {slides}
+                {slides}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </>
   );

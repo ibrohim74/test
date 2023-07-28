@@ -39,8 +39,12 @@ h1 {
   margin: 0 auto;
 }
 .navBar {
+  padding-top: 48px;
   width: 100%;
-  height: 60px;
+  height: auto;
+}
+.nav-content ul {
+  margin: 0;
 }
 .carousel-inner {
   height: 100%;
@@ -119,7 +123,8 @@ h1 {
   justify-content: center;
 }
 .partners {
-  margin-top: 30px;
+  padding-top: 128px;
+  padding-bottom: 64px;
   text-align: center;
   font-weight: bold;
   font-size: 24px;
@@ -127,7 +132,7 @@ h1 {
 .partners h1 {
   text-align: center;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
   line-height: 2.75rem;
   font-size: 2.25rem;
 }
@@ -145,7 +150,9 @@ h1 {
 }
 .info {
   max-width: 1080px;
-  margin-top: 60px;
+  /* margin-top: 60px; */
+  padding-top: 65px;
+  padding-bottom: 128px;
 }
 .info-box {
   display: flex;
@@ -172,17 +179,23 @@ h1 {
   width: 50%;
 }
 .function {
-  margin-top: 60px;
+  /* margin-top: 60px; */
+  padding-bottom: 128px;
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 1080px;
 }
 .func-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   width: 100%;
 }
 .func-title h1 {
+  margin: 0;
   font-size: 2.25rem;
   font-weight: bold;
 }
@@ -190,16 +203,15 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 20rem; /*was empty*/
+  margin-top: 32px;
+  background: #f3f3f3;
+  padding: 8px;
+  border-radius: 32px;
+  gap: 32px;
 }
 .func-type div {
-  width: 20rem; /*was empty*/
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: #f3f3f3;
-  padding: 5px;
-  border-radius: 32px;
+  width: 100%;
 }
 .x {
   position: fixed;
@@ -210,7 +222,7 @@ h1 {
   font-size: 1rem;
   font-weight: bold;
   border-radius: 28px;
-  padding: 10px;
+  padding: 1rem;
   margin: 0;
   height: 100%;
   width: 100%;
@@ -218,7 +230,7 @@ h1 {
 }
 
 .func-content {
-  /* margin-top: 60px; */
+  margin-top: 32px;
   width: 100%;
 }
 
@@ -246,7 +258,8 @@ h1 {
   width: 50%;
 }
 .launch {
-  margin-top: 100px;
+  /* margin-top: 100px; */
+  padding-bottom: 64px;
   width: 65%;
   max-width: 766px;
   display: flex;
@@ -262,9 +275,10 @@ h1 {
 
 .launch .launch-h1 {
   text-align: center;
+  margin: 0;
 }
 .launch-box {
-  margin-top: 50px;
+  margin-top: 32px;
   display: flex;
   justify-content: start;
   align-items: start;
@@ -293,6 +307,7 @@ h1 {
   margin-bottom: 32px;
 }
 .launch-titel h1 {
+  margin: 0;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.75rem;
@@ -302,21 +317,22 @@ h1 {
   font-size: 16px;
 }
 .launch-btn {
-  box-sizing: border-box !important;
+  cursor: pointer;
+  border-radius: 32px;
+  padding: 16px;
+  background: #b8ff65;
+  /* box-sizing: border-box !important; */
   /* margin-top: 10px; */
 }
 .launch-btn a {
+  font-size: 1.25rem;
   font-weight: 500;
-  border-radius: 32px;
-  color: black;
-  padding: 16px;
-  width: 170px;
-  height: 24px;
-  background: #b8ff65;
+  color: #000;
 }
 
 .faq {
-  margin-top: 60px;
+  /* margin-top: 60px; */
+  padding-bottom: 128px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -441,6 +457,9 @@ h1 {
   }
   .carousel-item img {
     width: 75%;
+  }
+  .navBar {
+    padding-top: 20px;
   }
   .nav-content {
     display: flex;
@@ -582,6 +601,7 @@ footer {
 /* styles.css (or any other CSS file) */
 .footer-links-header {
   font-size: 1.5rem; /* Equivalent to text-2xl */
+  font-weight: 500;
 }
 
 @media (max-width: 1050px) {

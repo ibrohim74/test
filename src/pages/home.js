@@ -3,7 +3,7 @@ import Carousel from "react-bootstrap/Carousel";
 import "../assets/css/home.css";
 import Question from "../component/question";
 import Slider from "../component/slider";
-import Wpsay from "../component/wps";
+import Wpsay from "../component/wpsay";
 const Home = () => {
   const [isActive, setIsActive] = useState(false);
   const [funcIsActive, setfuncIsActive] = useState(false);
@@ -188,15 +188,23 @@ const Home = () => {
               <h1>Functions that you'll love and need</h1>
               <div className="func-type">
                 {funcIsActive ? (
-                  <div>
-                    <h3 onClick={funcBox}>Yourself</h3>
-                    <h3 style={{ background: "white" }}>Team</h3>
-                  </div>
+                  <>
+                    <div>
+                      <h3 onClick={funcBox}>Yourself</h3>
+                    </div>
+                    <div>
+                      <h3 style={{ background: "white" }}>Team</h3>
+                    </div>
+                  </>
                 ) : (
-                  <div>
-                    <h3 style={{ background: "white" }}>Yourself</h3>
-                    <h3 onClick={funcBox}>Team</h3>
-                  </div>
+                  <>
+                    <div>
+                      <h3 style={{ background: "white" }}>Yourself</h3>
+                    </div>
+                    <div>
+                      <h3 onClick={funcBox}>Team</h3>
+                    </div>
+                  </>
                 )}
               </div>
             </div>
@@ -321,6 +329,9 @@ const Home = () => {
         <div className="info" id={"product"}>
           <div className="info-box">
             <div className="left-el">
+              <img src={require("../assets/testImg/braslet2.png")} alt="" />
+            </div>
+            <div className="right-el">
               <h1>Our goal is to make our world more greener than ever!</h1>
               <p>
                 Join us in our mission to create a greener world by embracing
@@ -330,9 +341,6 @@ const Home = () => {
                 eco-friendly and efficient. You can make a positive impact on
                 the environment while effortlessly sharing your profile.
               </p>
-            </div>
-            <div className="right-el">
-              <img src={require("../assets/testImg/braslet2.png")} alt="" />
             </div>
           </div>
         </div>
@@ -359,7 +367,9 @@ const Home = () => {
             <div className="footer-main">
               <div className="footer-text">
                 <div className="footer-text-content" size="txtRubikRegular16">
-                  Заряжайте свой автомобиль быстрее, удобнее и дешевле с нами.
+                  One place for all yout paper cards, digital profiles, social
+                  media, products, and analytics, all you need is one click
+                  away!
                 </div>
               </div>
               <div className="footer-links">
@@ -374,7 +384,7 @@ const Home = () => {
                           className="footer-list-item"
                           size="txtRubikRegular16"
                         >
-                          For home
+                          Product
                         </div>
                       </a>
                     </li>
@@ -384,17 +394,7 @@ const Home = () => {
                           className="footer-list-item"
                           size="txtRubikRegular16"
                         >
-                          For business
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="javascript:" className="footer-link">
-                        <div
-                          className="footer-list-item"
-                          size="txtRubikRegular16"
-                        >
-                          For drivers
+                          FAQs
                         </div>
                       </a>
                     </li>
@@ -408,6 +408,16 @@ const Home = () => {
                         </div>
                       </a>
                     </li>
+                    {/* <li>
+                      <a href="javascript:" className="footer-link">
+                        <div
+                          className="footer-list-item"
+                          size="txtRubikRegular16"
+                        >
+                          Blog
+                        </div>
+                      </a>
+                    </li> */}
                   </ul>
                 </div>
                 <div className="footer-links-column">
@@ -431,7 +441,34 @@ const Home = () => {
                           className="footer-list-item"
                           size="txtRubikRegular16"
                         >
-                          Return & Refund policy
+                          Contacts
+                        </div>
+                      </a>
+                    </li>
+                    {/*<li>
+                      <a href="javascript:" className="footer-link">
+                        <div
+                          className="footer-list-item"
+                          size="txtRubikRegular16"
+                        >
+                          Cookie policy
+                        </div>
+                      </a>
+                    </li> */}
+                  </ul>
+                </div>
+                <div className="footer-links-column">
+                  <div className="footer-links-header" size="txtRubikMedium24">
+                    Others
+                  </div>
+                  <ul className="footer-links-list">
+                    <li>
+                      <a href="javascript:" className="footer-link">
+                        <div
+                          className="footer-list-item"
+                          size="txtRubikRegular16"
+                        >
+                          Terms and Conditions
                         </div>
                       </a>
                     </li>
@@ -441,30 +478,11 @@ const Home = () => {
                           className="footer-list-item"
                           size="txtRubikRegular16"
                         >
-                          Cookie policy
+                          Cookie Policy
                         </div>
                       </a>
                     </li>
                   </ul>
-                </div>
-                <div className="footer-links-column">
-                  <div className="footer-links-header" size="txtRubikMedium24">
-                    Contacts
-                  </div>
-                  <div className="footer-contact-info">
-                    <div
-                      className="footer-contact-text"
-                      size="txtRubikRegular16"
-                    >
-                      hello@ecarchargers.uz
-                    </div>
-                    <div
-                      className="footer-contact-text"
-                      size="txtRubikRegular16"
-                    >
-                      +998 00 000 00 00
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -472,14 +490,15 @@ const Home = () => {
               <div className="line" />
               <div className="footer-logo">
                 <div className="footer-logo-text" size="txtRubikRegular14">
-                  eCARchargers
+                  All rights reserved
                 </div>
                 <div className="footer-logo-icon">
-                  <img
+                  created by
+                  {/* <img
                     className="footer-icon"
                     src="images/img_play.svg"
                     alt="play"
-                  />
+                  /> */}
                 </div>
               </div>
             </div>

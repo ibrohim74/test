@@ -1,5 +1,11 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
 
+.clients-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .clients {
   --img-size: 94px;
   width: 80vw;
@@ -7,6 +13,13 @@
   overflow: hidden !important;
   background-color: white;
 }
+
+@media screen and (max-width: 550px) {
+  .clients {
+    width: 100vw;
+  }
+}
+
 .slider {
   height: auto;
   position: relative;
