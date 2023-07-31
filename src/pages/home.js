@@ -169,7 +169,7 @@ const Home = () => {
         <div className="info">
           <div className="info-box">
             <div className="left-el">
-              <img src={require("../assets/testImg/braslet.png")} alt="" />
+              <img src={require("/images/wristband-duo.png")} alt="" />
             </div>
             <div className="right-el">
               <h1>Create and customize your digital profile in minutes.</h1>
