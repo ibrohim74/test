@@ -24,22 +24,19 @@ const VideoPanel = (props) => {
             <div className="v-btns-container">
               {/* bg-light_green-A200 cursor-pointer font-inter font-semibold min-w-[157px] py-[15px] rounded-[28px] text-black-900 text-center text-xl */}
               <button className="v-start-btn">Start for free</button>
-              <button
-                //   border-2 border-solid border-white-A700 cursor-pointer flex items-center justify-center min-w-[189px] px-3.5 py-[15px] rounded-[28px]
-                className="clock-svg"
-                leftIcon={
+              <button className="watch-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
                   // h-5 mt-[3px] mb-px mr-4 w-5 outline-teal-A400 outline-[2px] outline
-                  <div className="">
-                    <img
-                      className="h-5"
-                      src="images/img_clock.svg"
-                      alt="clock"
-                    />
-                  </div>
-                }
-              >
+                  className="play-icon"
+                >
+                  <path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z"></path>
+                </svg>
                 {/* font-inter font-semibold text-black-900 text-left text-xl */}
-                <div className="">Watch video</div>
+                <div className="watch-btn-text">Watch video</div>
               </button>
             </div>
           </div>
