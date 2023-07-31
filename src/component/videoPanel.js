@@ -29,11 +29,15 @@ const VideoPanel = (props) => {
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
-                  viewBox="0 0 24 24"
-                  // h-5 mt-[3px] mb-px mr-4 w-5 outline-teal-A400 outline-[2px] outline
-                  className="play-icon"
+                  viewBox="0 0 20 20"
+                  id="chevron"
                 >
-                  <path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z"></path>
+                  <path
+                    d="M11 10 8.698 7.494a.512.512 0 0 1 0-.718.5.5 0 0 1 .71 0l2.807 2.864a.51.51 0 0 1 0 .717l-2.807 2.864a.498.498 0 0 1-.71 0 .51.51 0 0 1 0-.717L11 10zM10 .4a9.6 9.6 0 0 1 9.6 9.6c0 5.303-4.298 9.6-9.6 9.6S.4 15.303.4 10A9.6 9.6 0 0 1 10 .4zm0 17.954a8.354 8.354 0 1 0 0-16.709 8.354 8.354 0 0 0 0 16.709z"
+                    fill="#e8e8e8"
+                    stroke="#e8e8e8"
+                    strokeWidth="1"
+                  ></path>
                 </svg>
                 {/* font-inter font-semibold text-black-900 text-left text-xl */}
                 <div className="watch-btn-text">Watch video</div>
