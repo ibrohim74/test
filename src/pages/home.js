@@ -169,7 +169,7 @@ const Home = () => {
         <div className="info">
           <div className="info-box">
             <div className="left-el">
-              <img src={require("/images/wristband-duo.png")} alt="" />
+              <img src={require("../assets/img/wristband-duo.png")} alt="" />
             </div>
             <div className="right-el">
               <h1>Create and customize your digital profile in minutes.</h1>
@@ -265,10 +265,18 @@ const Home = () => {
                     </div>
                   </div>
                 )}
-
-                <div className="func-right">
-                  <img src={require("../assets/testImg/braslet.png")} alt="" />
-                </div>
+                {funcIsActive ? (
+                  <div className="func-right">
+                    <img
+                      src={require("../assets/img/wristband-trio.png")}
+                      alt=""
+                    />
+                  </div>
+                ) : (
+                  <div className="func-right">
+                    <img src={require("../assets/img/wristband.png")} alt="" />
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -332,7 +340,10 @@ const Home = () => {
         <div className="info" id={"product"}>
           <div className="info-box">
             <div className="left-el">
-              <img src={require("../assets/testImg/braslet2.png")} alt="" />
+              <img
+                src={require("../assets/img/wristband-reverse.png")}
+                alt=""
+              />
             </div>
             <div className="right-el">
               <h1>Our goal is to make our world more greener than ever!</h1>
