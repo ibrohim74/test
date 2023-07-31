@@ -1,0 +1,80 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
+
+.clients-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients {
+  --img-size: 94px;
+  width: 80vw;
+  max-width: 1080px;
+  overflow: hidden !important;
+  background-color: white;
+}
+
+@media screen and (max-width: 550px) {
+  .clients {
+    width: 100vw;
+  }
+}
+
+.slider {
+  height: auto;
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.slider-track {
+  display: flex;
+  width: 100%;
+  animation: clientScroll 15s linear infinite;
+}
+.slide {
+  height: var(--img-size) !important;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+.slide img {
+  width: auto;
+}
+.slider::before,
+.slider::after {
+  top: 0;
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+.slider::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+.slider::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.slide img:hover {
+  transform: translateZ(20px);
+  transition: 0.1s ease-in-out;
+}
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes clientScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

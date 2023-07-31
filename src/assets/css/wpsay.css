@@ -1,0 +1,36 @@
+.wpsay {
+  box-sizing: border-box !important;
+  width: 100%;
+  max-width: 1080px;
+  /* margin-top: 70px; */
+  padding-bottom: 128px;
+}
+
+.wpsay-title {
+  font-size: 36px;
+  margin-bottom: 32px;
+  font-weight: 600;
+  line-height: 44px;
+  text-align: center;
+}
+
+.wpsay-item {
+  /* display: inline-block; */
+}
+
+.wpsay-container {
+  background-color: #f3f3f3;
+  border-radius: 32px;
+  margin-right: 14px;
+  margin-left: 14px;
+  box-sizing: content-box;
+  padding: 28px;
+}
+.wpsay-container h1 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+.wpsay-container p {
+  margin: 0;
+}
