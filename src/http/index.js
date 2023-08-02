@@ -34,7 +34,7 @@ const useTokenRefresh = () => {
 
     const refreshToken = async () => {
         try {
-            const {data} = await $authHost.post('/api/token/refresh', {
+            const {data} = await $authHost.post('api/v1/token/refresh', {
                 refresh: localStorage.getItem('refreshToken'),
             });
             const newAccessToken = data.access;

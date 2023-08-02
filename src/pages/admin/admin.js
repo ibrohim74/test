@@ -27,7 +27,7 @@ const Admin = observer(() => {
     const token = useTokenRefresh();
     useEffect(() => {
         const getData = async () => {
-            const res = await $authHost.get('api/users/' + localStorage.getItem('uuid'));
+            const res = await $authHost.get('api/v1/users/' + localStorage.getItem('uuid'));
             setCurrentUser([res.data])
         };
         if (token) {
