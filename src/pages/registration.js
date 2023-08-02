@@ -67,7 +67,7 @@ const Registration = () => {
       <Container className="registration-box">
         <Row>
           <Col className="mb-4">
-            <h3>Sign up</h3>
+            <div>Sign up</div>
           </Col>
         </Row>
         <Container>
