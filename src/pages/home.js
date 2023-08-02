@@ -5,8 +5,8 @@ import Question from "../component/question";
 import Slider from "../component/slider";
 import Wpsay from "../component/wpsay";
 import VideoPanel from "../component/videoPanel";
-import {LOGIN_ROUTE} from "../utils/consts";
-import {Link} from "react-router-dom";
+import { LOGIN_ROUTE } from "../utils/consts";
+import { Link } from "react-router-dom";
 const Home = () => {
   const [isActive, setIsActive] = useState(false);
   const [funcIsActive, setfuncIsActive] = useState(false);
