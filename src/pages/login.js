@@ -14,8 +14,8 @@ const Login = () => {
     const click = async ()=>{
         try {
             await login(username, password);
-            history(ADMIN_ROUTE);
-            user.setIsAuth(true)
+            user.setIsAuth(true);
+            // history(ADMIN_ROUTE);
         }catch (e) {
             alert(e)
         }

@@ -15,16 +15,13 @@ import Home from "./pages/home";
 import Login from "./pages/login";
 import Registration from "./pages/registration";
 import UserProfile from "./pages/admin/user/userProfile";
-import UserDevise from "./pages/admin/user/userDevise";
 import UserOrder from "./pages/admin/user/userOrder";
-import CompanyDevise from "./pages/admin/company/companyDevise";
 import CompanyOrders from "./pages/admin/company/companyOrders";
 import CompanyProfile from "./pages/admin/company/companyProfile";
 import CompanyUserList from "./pages/admin/company/companyUserList";
 import AdminProfile from "./pages/admin/admin/adminProfile";
 import EditAllUser from "./pages/admin/admin/editAllUser";
 import Statistics from "./pages/admin/admin/statistics";
-import PolyDevise from "./pages/admin/polygraph/polyDevise";
 import PolyGetAll from "./pages/admin/polygraph/polyGetAll";
 
 
@@ -57,20 +54,13 @@ export const userRoute = [
         Component:<UserProfile/>
     },
     {
-        path:DEVISE_USER,
-        Component:<UserDevise/>
-    },
-    {
         path:ORDER_USER,
         Component:<UserOrder/>
     },
 ];
 
 export const companyRoute = [
-    {
-        path:COMPANY_DEVISE,
-        Component:<CompanyDevise/>
-    },
+
     {
         path:ORDERS_MANAGER,
         Component:<CompanyOrders/>
@@ -101,10 +91,7 @@ export const adminRoute = [
 ];
 
 export const polyRoute = [
-    {
-        path:DEVISE_POLY,
-        Component:<PolyDevise />
-    }  ,
+
     {
         path:GET_ORDERS,
         Component:<PolyGetAll />
