@@ -11,11 +11,11 @@
   --light-gray: #ededf2;
 }
 
-.container {
+.contact .container {
   width: 100%;
   padding: 0 !important;
 }
-.container:first-of-type {
+.contact .container:first-of-type {
   background-color: var(--main-color, #ededf2);
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
@@ -52,12 +52,12 @@
     border-radius: 0;
     /* width: 100vw !important; */
   }
-  .container {
+  .contact .container {
     margin: 0 !important;
     padding: 0 !important;
     min-width: 100vw !important;
   }
-  .container:first-of-type {
+  .contact .container:first-of-type {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
