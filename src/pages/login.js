@@ -15,7 +15,6 @@ const Login = () => {
         try {
             await login(username, password);
             user.setIsAuth(true);
-            // history(ADMIN_ROUTE);
         }catch (e) {
             alert(e)
         }
