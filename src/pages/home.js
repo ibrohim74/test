@@ -5,6 +5,8 @@ import Question from "../component/question";
 import Slider from "../component/slider";
 import Wpsay from "../component/wpsay";
 import VideoPanel from "../component/videoPanel";
+import {LOGIN_ROUTE} from "../utils/consts";
+import {Link} from "react-router-dom";
 const Home = () => {
   const [isActive, setIsActive] = useState(false);
   const [funcIsActive, setfuncIsActive] = useState(false);
@@ -93,7 +95,7 @@ const Home = () => {
                 <option value="en">En</option>
               </select>
 
-              <div className="account">
+              <Link to={LOGIN_ROUTE} className="account">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -106,7 +108,7 @@ const Home = () => {
                     fill="black"
                   />
                 </svg>
-              </div>
+              </Link>
               <div className="menu" onClick={handleClick}>
                 {isActive ? (
                   <svg

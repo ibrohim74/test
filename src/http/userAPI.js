@@ -24,7 +24,7 @@ export const login = async (username, password) => {
     localStorage.setItem('token', data.tokens.access);
     localStorage.setItem('refreshToken', data.tokens.refresh);
     localStorage.setItem('uuid', data.user.id);
-    return jwt_decode(data.tokens.access)
+    return window.location.assign('/admin')
 };
 
 export const check = async () => {

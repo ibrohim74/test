@@ -29,6 +29,7 @@ const Admin = observer(() => {
         const getData = async () => {
             const res = await $authHost.get('api/v1/users/' + localStorage.getItem('uuid'));
             setCurrentUser([res.data])
+            console.log(res)
         };
         if (token) {
             getData()
@@ -56,11 +57,6 @@ const Admin = observer(() => {
                         <li>
                             <Link to={PROFILE_USER}>
                                 U_Profile
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to={DEVISE_USER}>
-                                U_Devise
                             </Link>
                         </li>
                         <li>
@@ -106,20 +102,13 @@ const Admin = observer(() => {
                                 Order
                             </Link>
                         </li>
-                        <li>
-                            <Link to={COMPANY_DEVISE}>
-                                Devise
-                            </Link>
-                        </li>
+
                     </ul>
                     }
                     {typeUser() === 'POLYGRAPHY' &&
                     <ul>
                         <li>
 
-                            <Link to={DEVISE_POLY}>
-                                Devise
-                            </Link>
                         </li>
                     </ul>
                     }
