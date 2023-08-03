@@ -17,6 +17,7 @@ export const registration = async (username, email, password, first_name, last_n
         address
     });
 
+    console.log(response)
 }
 
 export const login = async (username, password) => {

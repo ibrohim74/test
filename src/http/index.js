@@ -45,7 +45,7 @@ const useTokenRefresh = () => {
             return newAccessToken;
         } catch (error) {
             console.error('Token yangilashda xatolik yuz berdi:', error);
-            return null;
+            return window.location.href('/login');
         }
     }
 
@@ -57,7 +57,7 @@ const useTokenRefresh = () => {
 
         intervalRef = setInterval(() => {
             refreshToken();
-        }, 6*3600*1000);
+        }, 30000);
 
         return () =>{ clearInterval(intervalRef)};
     }, []);

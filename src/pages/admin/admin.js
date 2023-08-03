@@ -29,7 +29,6 @@ const Admin = observer(() => {
         const getData = async () => {
             const res = await $authHost.get('api/v1/users/' + localStorage.getItem('uuid'));
             setCurrentUser([res.data])
-            console.log(res)
         };
         if (token) {
             getData()

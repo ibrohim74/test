@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import { Routes, Route,Navigate} from "react-router-dom";
 import {Context} from "../index";
-import {adminDash, publicRoute, userPageContact} from "../routs";
+import {adminDash, publicRoute} from "../routs";
 import {observer} from "mobx-react-lite";
 import UserPageContact from "../pages/userPageContact";
 import {data} from "./db";
