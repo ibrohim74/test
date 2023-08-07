@@ -1,6 +1,7 @@
 import axios from "axios";
 import {useEffect, useState} from "react";
-
+import {useNavigate} from "react-router-dom";
+import {logOut} from "./userAPI";
 const $host = axios.create({
     baseURL: process.env.REACT_APP_API_URL
 })
@@ -23,6 +24,8 @@ $authHost.interceptors.request.use(
 )
 
 const useTokenRefresh = () => {
+    const history = useNavigate();
+
     const [accessToken, setAccessToken] = useState(null);
     let intervalRef = null;
     const getAccessToken = () => {
@@ -45,7 +48,7 @@ const useTokenRefresh = () => {
             return newAccessToken;
         } catch (error) {
             console.error('Token yangilashda xatolik yuz berdi:', error);
-            return window.location.href('/login');
+             history('/');
         }
     }
 
@@ -57,7 +60,7 @@ const useTokenRefresh = () => {
 
         intervalRef = setInterval(() => {
             refreshToken();
-        }, 30000);
+        }, 15000);
 
         return () =>{ clearInterval(intervalRef)};
     }, []);

@@ -26,12 +26,16 @@ const Admin = observer(() => {
 
     const token = useTokenRefresh();
     useEffect(() => {
-        const getData = async () => {
-            const res = await $authHost.get('api/v1/users/' + localStorage.getItem('uuid'));
-            setCurrentUser([res.data])
-        };
-        if (token) {
-            getData()
+        try {
+            const getData = async () => {
+                const res = await $authHost.get('api/v1/users/' + localStorage.getItem('uuid'));
+                setCurrentUser([res.data])
+            };
+            if (token) {
+                getData()
+            }else {return  console.log('err')}
+        }catch (e) {
+            return window.location.assign('/')
         }
 
     }, [token]);

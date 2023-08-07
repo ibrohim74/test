@@ -6,9 +6,8 @@ body{
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif !important;
 }
-#root{
-
-
+.ant-modal-footer{
+    display: none;
 }
 .content-admin{
     height: 100% !important;
@@ -36,6 +35,7 @@ body{
     width: 100%;
     background: #e0e0e0;
 }
+
 .header{
     width: 77.1%;
     height: 100px;
