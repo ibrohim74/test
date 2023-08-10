@@ -1,5 +1,7 @@
 import React, {useContext, useState} from "react";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
+import {message} from "antd";
+
 import {
     Container,
     Form,
@@ -16,42 +18,70 @@ import {useLocation, useNavigate} from "react-router-dom";
 import "../assets/css/registration.css";
 
 const Registration = () => {
-    const {user} = useContext(Context);
-    const history = useNavigate();
+    const [messageApi, contextHolder] = message.useMessage();
+
     const [regData, setRegData] = useState([]);
-    const [passwordInput, setPasswordInput] = useState("");
     const [invalidConfirm, setInvalidConfirm] = useState("");
-    console.log(regData);
-    const click = async () => {
-        try {
-            await registration(
-                regData.username,
-                regData.email,
-                regData.password,
-                regData.first_name,
-                regData.last_name,
-                regData.phone,
-                regData.birthday,
-                regData.work_info,
-                regData.address
-            );
-            history(LOGIN_ROUTE);
-        } catch (e) {
-            alert(e);
+    let sendData = {
+        username: regData.username,
+        email:regData.email ? regData.email : '',
+        password:regData.password,
+        first_name: regData.first_name ? regData.first_name : '',
+        last_name:regData.last_name ? regData.last_name : '',
+        phone:regData.phone ? regData.phone : '',
+        birthday:regData.birthday ? regData.birthday : null,
+        theme:null,
+        created_by_id:null,
+        work_info: {
+            org: regData.work_info ? regData.work_info.org : '',
+            role: regData.work_info ? regData.work_info.role : ''
+        } ,
+        address:{
+            city:regData.address ? regData.address.city : '',
+            region:regData.address ? regData.address.region : '',
+            country:regData.address ? regData.address.country : '',
+            street:regData.address ? regData.address.street : ''
         }
+    }
+
+    const click = async () => {
+        if (sendData.password === '' || sendData.password === null || sendData.password === undefined){
+            messageApi.open({
+                type: 'error',
+                content: 'Password',
+            })
+        }else if (sendData.username === '' || sendData.username === null || sendData.username === undefined){
+            messageApi.open({
+                type: 'error',
+                content: 'Username',
+            })
+        }else if (sendData.first_name === ''){
+            messageApi.open({
+                type: 'error',
+                content: 'first_name',
+            })
+        }else if (sendData.last_name === ''){
+            messageApi.open({
+                type: 'error',
+                content: 'last_name',
+            })
+        }else {
+            try {
+                await registration(sendData);
+            } catch (e) {
+                alert(e);
+            }
+        }
+
+
+
     };
-    const handlePasswordInput = (e) => {
-        setRegData({...regData, password: e.target.value});
-        setPasswordInput(e.target.value);
-    };
-    const handleConfirm = (value) => {
-        setInvalidConfirm(value !== passwordInput);
-        console.log(value);
-        console.log(passwordInput);
-    };
+
 
     return (
         <div className="registration">
+            {contextHolder}
+
             <Container className="registration-box">
                 <Row>
                     <Col className="mb-4">
@@ -117,24 +147,7 @@ const Registration = () => {
                                     placeholder="Password"
                                     value={regData.password}
                                     onChange={(e) => {
-                                        handlePasswordInput(e);
-                                    }}
-                                />
-                            </FloatingLabel>
-                        </Col>
-                        <Col>
-                            {/* CONFIRM PASSWORD */}
-                            <FloatingLabel
-                                controlId="floatingPassword"
-                                label="confirm password"
-                                className="mb-4"
-                            >
-                                <Form.Control
-                                    type="password"
-                                    placeholder="Password"
-                                    // value={regData.password}
-                                    onChange={(e) => {
-                                        handleConfirm(e.target.value);
+                                        setRegData({...regData, password: e.target.value});
                                     }}
                                 />
                             </FloatingLabel>
@@ -171,13 +184,13 @@ const Registration = () => {
                             {/* LAST NAME */}
                             <FloatingLabel
                                 controlId="floatingInput"
-                                label="first name"
+                                label=" last_name"
                                 className="mb-4"
                             >
                                 <Form.Control
                                     type="text"
-                                    placeholder="Pismadonchiyev"
-                                    vvalue={regData.last_name}
+                                    placeholder="last_name"
+                                    value={regData.last_name}
                                     onChange={(e) => {
                                         setRegData({...regData, last_name: e.target.value});
                                     }}
@@ -226,18 +239,26 @@ const Registration = () => {
                             {/* WORK INFO */}
                             <FloatingLabel
                                 controlId="floatingInput"
-                                label="work info"
+                                label="organization"
                                 className="mb-4"
                             >
                                 <Form.Control
-                                    // as="textarea"
-                                    rows={3}
                                     type="text"
                                     placeholder="hello from work info"
-                                    style={{height: "100px"}}
-                                    value={regData.work_info}
                                     onChange={(e) => {
-                                        setRegData({...regData, work_info: e.target.value});
+                                        setRegData({...regData , work_info:{...regData.work_info , org:e.target.value}});
+                                    }}
+                                />
+                            </FloatingLabel><FloatingLabel
+                                controlId="floatingInput"
+                                label="Role"
+                                className="mb-4"
+                            >
+                                <Form.Control
+                                    type="text"
+                                    placeholder="hello from work info"
+                                    onChange={(e) => {
+                                        setRegData({...regData , work_info:{...regData.work_info , role:e.target.value}});
                                     }}
                                 />
                             </FloatingLabel>

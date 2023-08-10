@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {$authHost} from "../../../http";
 import {message, Popconfirm, Button, Modal, Input,DatePicker} from 'antd';
+import {Table} from "react-bootstrap";
 
 const DeleteUser = async (e, username) => {
     try {
@@ -21,6 +22,10 @@ const CompanyUserList = () => {
     const [data, setData] = useState([]);
     const [createUser, setCreateUser] = useState({
         birthday:'',
+        work_info:{
+            org:'',
+            role:''
+        },
         address:{
             street: '',
             region:'',
@@ -31,6 +36,10 @@ const CompanyUserList = () => {
     });
     const [updateUser, setUpdateUser] = useState({
         birthday:'',
+        work_info:{
+            org:'',
+            role:''
+        },
         address:{
             street: '',
             region:'',
@@ -41,7 +50,6 @@ const CompanyUserList = () => {
     });
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [messageApi, contextHolder] = message.useMessage();
-console.log(data)
     const handleCancel = () => {
         setIsModalOpen(false);
     };
@@ -50,9 +58,6 @@ console.log(data)
     };
     const showModalUpdate = () => {
         setUpdateOpen(true);
-    };
-    const handleOkUpdate = () => {
-        setUpdateOpen(false);
     };
     const handleCancelUpdate = () => {
         setUpdateOpen(false);
@@ -84,9 +89,35 @@ console.log(data)
             console.log(e)
         }
     }
+
     const sendUpdate = async (id)=> {
+        const get = await $authHost.get("api/v1/users/"+id+"/")
+
+        let dataIndex = {
+            username: updateUser.username ? updateUser.username : get.data.username,
+            email: updateUser.email ? updateUser.email : get.data.email,
+            password: updateUser.password ,
+            first_name: updateUser.first_name ? updateUser.first_name : get.data.first_name,
+            last_name: updateUser.last_name ? updateUser.last_name : get.data.last_name,
+            phone: updateUser.phone ? updateUser.phone : get.data.phone,
+            birthday: updateUser.birthday ? updateUser.birthday : get.data.birthday,
+            created_by_id:get.data.created_by_id,
+            theme:get.data.theme,
+            work_info: {
+                org: updateUser.work_info.org === '' ?  get.data.work_info.org:  updateUser.work_info.org,
+                role: updateUser.work_info.role === '' ? get.data.work_info.role: updateUser.work_info.role
+            },
+            address: {
+                city: updateUser.address.city ?  get.data.address.city:  updateUser.address.city,
+                street: updateUser.address.street ?  get.data.address.street : updateUser.address.street,
+                region: updateUser.address.region ?  get.data.address.region :  updateUser.address.region,
+                country: updateUser.address.country ? get.data.address.country :  updateUser.address.country
+            }
+        }
+
         try {
-            const res = await $authHost.put("api/v1/users/"+id+"/", updateUser)
+
+            const res = await $authHost.put("api/v1/users/"+id+"/", dataIndex)
             messageApi.open({
                 type: 'success',
                 content: res.data.username +" update",
@@ -119,7 +150,7 @@ console.log(data)
                 <td>{item.id}</td>
                 <td>{item.username}</td>
                 <td>{item.phone}</td>
-                <td>{item.work_info}</td>
+                <td>{item.work_info.role}</td>
                 <td>
                     <Popconfirm
                         title="Delete "
@@ -132,7 +163,7 @@ console.log(data)
                         <Button danger>Delete</Button>
                     </Popconfirm>
                     <Button type="primary" onClick={showModalUpdate}>
-                        Open Modal
+                        Update
                     </Button>
                 </td>
             </tr>
@@ -171,10 +202,15 @@ console.log(data)
                     />
                     <DatePicker onChange={birthdayUpdate}
                     />
-                    <Input placeholder="work_info"
+                    <Input placeholder="Organization"
                            required
-                           onChange={e => {
-                               setUpdateUser({...updateUser, work_info: e.target.value})
+                           onChange={(e) => {
+                               setUpdateUser({...updateUser , work_info:{...updateUser.work_info , org:e.target.value}});
+                           }}/>
+<Input placeholder="Role"
+                           required
+                           onChange={(e) => {
+                               setUpdateUser({...updateUser , work_info:{...updateUser.work_info , role:e.target.value}});
                            }}/>
 
 
@@ -218,20 +254,14 @@ console.log(data)
         </>
     })
 
-    console.log(updateUser)
-
-
-
-
-
     useEffect(() => {
         userList()
     }, [])
     return (
-        <div>
+        <div className={'user-list'}>
             {contextHolder}
 
-            <Button type="primary" onClick={showModal}>
+            <Button type="primary" style={{marginTop:"50px", marginBottom:"30px"}} onClick={showModal}>
                 Create User
             </Button>
             <Modal title="Creat user" open={isModalOpen} onCancel={handleCancel}>
@@ -268,10 +298,15 @@ console.log(data)
                     />
                     <DatePicker onChange={birthdayChange}
                     />
-                    <Input placeholder="work_info"
+                    <Input placeholder="Organization"
                            required
-                           onChange={e => {
-                               setCreateUser({...createUser, work_info: e.target.value})
+                           onChange={(e) => {
+                               setCreateUser({...createUser , work_info:{...createUser.work_info , org:e.target.value}});
+                           }}/>
+                    <Input placeholder="Role"
+                           required
+                           onChange={(e) => {
+                               setCreateUser({...createUser , work_info:{...createUser.work_info , role:e.target.value}});
                            }}/>
 
 
@@ -312,18 +347,18 @@ console.log(data)
                     <button type={"submit"} onClick={sendNewUser}>send</button>
                 </>
             </Modal>
-            <table>
+            <Table>
                 <thead>
                 <th>id</th>
                 <th>username</th>
                 <th>Phone</th>
-                <th>wok_info</th>
+                <th>Role</th>
                 <th>Action</th>
                 </thead>
                 <tbody>
                 {tableUser}
                 </tbody>
-            </table>
+            </Table>
         </div>
     );
 };

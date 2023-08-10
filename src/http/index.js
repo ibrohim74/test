@@ -3,11 +3,10 @@ import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {logOut} from "./userAPI";
 const $host = axios.create({
-    baseURL: process.env.REACT_APP_API_URL
+    baseURL: 'https://nfcglobaltech.uz'
 })
-
 const $authHost = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
+    baseURL: 'https://nfcglobaltech.uz',
 })
 
 $authHost.interceptors.request.use(

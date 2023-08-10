@@ -4,20 +4,16 @@ import Admin from "../pages/admin/admin";
 
 
 
-export const registration = async (username, email, password, first_name, last_name, phone, birthday, work_info, address) => {
-    const response = await $host.post('api/v1/register', {
-        username,
-        email,
-        password,
-        first_name,
-        last_name,
-        phone,
-        birthday,
-        work_info,
-        address
-    });
+export const registration = async (sendData) => {
+    console.log(sendData)
+    try {
+        const response = await $host.post('api/v1/register', sendData);
+        window.location.assign('/login')
+    }catch (e) {
+        console.log(e)
 
-    console.log(response)
+    }
+
 }
 
 export const login = async (username, password) => {

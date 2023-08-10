@@ -9,6 +9,7 @@ body{
 .ant-modal-footer{
     display: none;
 }
+.ant-cascader-menus ul{display: block}
 .content-admin{
     height: 100% !important;
 }
@@ -135,15 +136,37 @@ body{
     inset 5px -5px 10px #ffffff;
 }
 .content-adminPage{
-    width: 77%;
-    height: 87%;    background: #e0e0e0;
+    width: 78%;
+    height: 100%;
+    background: #e0e0e0;
 
 
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    position: relative;
+    right: -21%;
+    bottom: -125px;
     z-index: 1;
     padding: 10px;
 }
 
-
+Table{
+    width: 70% !important;
+    text-align: center;
+}
+.user-list{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+.companyOrder select{
+    margin-top: 50px;
+}
+.companyOrder{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+.orderBtn{
+    margin-bottom: 30px;
+}

@@ -1,3 +1,8 @@
+import {$host} from "../http";
+
+const getUser =async ()=>{
+  const res = await $host.get('api/v1/')
+}
 export const data = [
   {
     id: 1,
@@ -10,59 +15,6 @@ export const data = [
     telegram: "https://t.me/s/rinzler_0101",
     linkedin: "",
     facebook: "",
-    avatar: require("../assets/img/dev.jpeg"),
-  },
-
-  {
-    id: 2,
-    name: "Behzod",
-    name2: "Abdullaev",
-    tel: "+998998905444",
-    companyName: "IT park",
-    jobName: "Head of Digital Technology Department",
-    instagram: "",
-    telegram: "https://t.me/s/rinzler_0101",
-    linkedin: "",
-    facebook: "",
-    avatar: require("../assets/img/dev.jpeg"),
-  },
-  {
-    id: 3,
-    name: "Khasanov3",
-    name2: "Ibroxim",
-    tel: "+998993045475",
-    companyName: "IT park",
-    jobName: "Frontend developer",
-    instagram: "https://www.instagram.com/khasanov_ibroxim",
-    telegram: "https://t.me/s/khasanov_ibroxim",
-    linkedin: "https://www.linkedin.com/khasanov_ibroxim/",
-    facebook: "https://www.facebook.com/khasanov_ibroxim/",
-    avatar: require("../assets/img/dev.jpeg"),
-  },
-  {
-    id: 4,
-    name: "Khasanov4",
-    name2: "Ibroxim",
-    tel: "+998993045475",
-    companyName: "IT park",
-    jobName: "Frontend developer",
-    instagram: "https://www.instagram.com/khasanov_ibroxim",
-    telegram: "https://t.me/s/khasanov_ibroxim",
-    linkedin: "https://www.linkedin.com/khasanov_ibroxim/",
-    facebook: "https://www.facebook.com/khasanov_ibroxim/",
-    avatar: require("../assets/img/dev.jpeg"),
-  },
-  {
-    id: 5,
-    name: "Khasanov5",
-    name2: "Ibroxim",
-    tel: "+998993045475",
-    companyName: "IT park",
-    jobName: "Frontend developer",
-    instagram: "https://www.instagram.com/khasanov_ibroxim",
-    telegram: "https://t.me/s/khasanov_ibroxim",
-    linkedin: "https://www.linkedin.com/khasanov_ibroxim/",
-    facebook: "https://www.facebook.com/khasanov_ibroxim/",
     avatar: require("../assets/img/dev.jpeg"),
   },
 ];

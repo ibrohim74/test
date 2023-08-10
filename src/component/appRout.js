@@ -18,9 +18,9 @@ const AppRout = observer(() => {
                 }
                 { local && adminDash.map(({path, Component}) => <Route key={path} path={path + "/*"} element={Component}/>)}
 
-                {data.map( item =>
-                    <Route key={item.id} exact path={`/userContact/${item.id}`} element={<UserPageContact data={item} />} />
-                )}
+
+                    <Route  exact path={`/:username`} element={<UserPageContact/>} />
+
                 <Route
                     path="*"
                     element={<Navigate to="/" replace />}

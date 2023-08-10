@@ -1,15 +1,11 @@
 import React, {useContext, useEffect, useState} from 'react';
-import Sidebar from "./sidebar";
 
 import {Routes, Route, Link} from "react-router-dom"
 import {observer} from "mobx-react-lite";
 import {$authHost, useTokenRefresh} from "../../http";
-import {Context} from "../../index";
 import {adminRoute, companyRoute, polyRoute, userRoute} from "../../routs";
 import {QuestionCircleOutlined} from "@ant-design/icons";
 import {
-    COMPANY_DEVISE, DEVISE_POLY,
-    DEVISE_USER,
     EDIT_ALL_USER,
     ORDER_USER, ORDERS_MANAGER,
     PROFILE_ADMIN,
@@ -18,11 +14,11 @@ import {
     STATISTIC, USER_LIST
 } from "../../utils/consts";
 import {getUser_Profile, logOut} from "../../http/userAPI";
+import { Layout, Space } from 'antd';
+const { Header, Footer, Sider, Content } = Layout;
 
 const Admin = observer(() => {
-    const {user} = useContext(Context);
     const [currentUser, setCurrentUser] = useState([]);
-    const [type, setType] = useState('');
 
     const token = useTokenRefresh();
     useEffect(() => {
@@ -50,6 +46,7 @@ const Admin = observer(() => {
         typeUser()
     }, [])
     return (
+
         <div className={"adminPage"}>
             <div className="said-bar">
                 <div className='sidebar'>
@@ -59,12 +56,12 @@ const Admin = observer(() => {
                     <ul>
                         <li>
                             <Link to={PROFILE_USER}>
-                                U_Profile
+                                Profile
                             </Link>
                         </li>
                         <li>
                             <Link to={ORDER_USER}>
-                                U_Order
+                                Order
                             </Link>
                         </li>
                     </ul>
@@ -111,13 +108,15 @@ const Admin = observer(() => {
                     {typeUser() === 'POLYGRAPHY' &&
                     <ul>
                         <li>
-
+                            <Link to={ORDERS_MANAGER}>
+                                Order
+                            </Link>
                         </li>
                     </ul>
                     }
 
                     <div className="footer-sidebar">
-                        <h3>Help && support </h3> <QuestionCircleOutlined/>
+                        {/*<h3>Help && support </h3> <QuestionCircleOutlined/>*/}
                     </div>
                 </div>
             </div>

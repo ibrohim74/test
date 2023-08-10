@@ -1,29 +1,67 @@
 import React, {useEffect, useState} from 'react';
-
 import {$authHost} from "../../../http";
+import {message} from "antd";
+import {Err} from "../../../component/err";
+import {Button, Table} from "react-bootstrap";
+
 
 const CompanyOrders = () => {
-    const [orderList , setOrderList]= useState([]);
+    const [messageApi, contextHolder] = message.useMessage();
 
+    const [orderList , setOrderList]= useState([]);
+    const [data, setData] = useState([]);
+    const optionData = data.map((item)=>{return<option  value={item.id}>{item.username}</option>})
 
     const getOrderList = async () =>{
         try {
             const res =await $authHost.get('api/v1/orders/')
             return setOrderList(res.data)
         }catch (e) {
-            console.log(e)
+            messageApi.open({
+                type: 'error',
+                content: e.message,
+            })
         }
 
     }
-    const getUserInfo= async (id)=>{
+    useEffect(()=>{getOrderList()
+        userList()},[])
 
+    const createBtn =async ()=>{
+        const getSelect = document.getElementById('select')
+        try {
+            const res = await $authHost.post('api/v1/orders/',{user_id:getSelect.value} )
+            messageApi.open({
+                type: 'success',
+                content: 'Buyurtma qabul qilindi',
+            })
+           return window.location.reload()
+        }catch (e) {
+            messageApi.open({
+                type: 'error',
+                content: Err(e.response.status),
+            })
+
+        }
     }
-    useEffect(()=>{getOrderList()},[])
 
-console.log(orderList)
+
+    const userList = async () => {
+        const res = await $authHost.get('api/v1/users/')
+        setData(res.data)
+    }
+    console.log(data)
     return (
-        <div>
-            <table>
+        <div className={"companyOrder"}>
+            {contextHolder}
+            <div className="orderBtn">
+                <select  id="select">
+                    {optionData}
+                </select>
+                <Button onClick={createBtn}>create</Button>
+            </div>
+
+            <Table>
                 <thead>
                 <th>Username</th>
                 <th>telephone</th>
@@ -33,13 +71,15 @@ console.log(orderList)
                 {orderList.map( (item)=>{
                     return<>
                     <tr>
-                        {item.user_id}
+                        <td>{item.user.username}</td>
+                        <td>{item.user.phone}</td>
+                        <td>{item.status}</td>
                     </tr>
 
                 </>
                 })}
                 </tbody>
-            </table>
+            </Table>
         </div>
     );
 };
