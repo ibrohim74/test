@@ -6,7 +6,7 @@ import {$authHost, useTokenRefresh} from "../../http";
 import {adminRoute, companyRoute, polyRoute, userRoute} from "../../routs";
 import {QuestionCircleOutlined} from "@ant-design/icons";
 import {
-    EDIT_ALL_USER,
+    EDIT_ALL_USER, GET_ORDERS,
     ORDER_USER, ORDERS_MANAGER,
     PROFILE_ADMIN,
     PROFILE_COMPANY,
@@ -108,7 +108,7 @@ const Admin = observer(() => {
                     {typeUser() === 'POLYGRAPHY' &&
                     <ul>
                         <li>
-                            <Link to={ORDERS_MANAGER}>
+                            <Link to={GET_ORDERS}>
                                 Order
                             </Link>
                         </li>
@@ -135,7 +135,7 @@ const Admin = observer(() => {
                     {typeUser() === 'COMPANY' && companyRoute.map(({path, Component}) =>
                         <Route key={path} path={path} element={Component} exact/>
                     )}
-                    {typeUser() === 'REGULAR' && polyRoute.map(({path, Component}) =>
+                    {typeUser() === 'POLYGRAPHY' && polyRoute.map(({path, Component}) =>
                         <Route key={path} path={path} element={Component} exact/>
                     )}
 

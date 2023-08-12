@@ -8,7 +8,7 @@ const UserOrder = () => {
 
     const getOrder = async ()=>{
         try {
-            const res = await $authHost.get('api/v1/order/'+localStorage.getItem('uuid'))
+            const res = await $authHost.get('api/v1/order/'+localStorage.getItem('uuid')+'/')
             setUser(res.data)
             setStatus(true)
             console.log(res)
