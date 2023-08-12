@@ -12,9 +12,6 @@ import {
     FormGroup,
 } from "react-bootstrap";
 import {login, registration} from "../http/userAPI";
-import {ADMIN_ROUTE, LOGIN_ROUTE} from "../utils/consts";
-import {Context} from "../index";
-import {useLocation, useNavigate} from "react-router-dom";
 import "../assets/css/registration.css";
 
 const Registration = () => {
@@ -28,7 +25,7 @@ const Registration = () => {
         password:regData.password,
         first_name: regData.first_name ? regData.first_name : '',
         last_name:regData.last_name ? regData.last_name : '',
-        phone:regData.phone ? regData.phone : '',
+        phone:regData.phone ? regData.phone : null,
         birthday:regData.birthday ? regData.birthday : null,
         theme:null,
         created_by_id:null,
@@ -64,6 +61,11 @@ const Registration = () => {
             messageApi.open({
                 type: 'error',
                 content: 'last_name',
+            })
+        }else if (sendData.phone === '' || sendData.phone ===null) {
+            messageApi.open({
+                type: 'error',
+                content: 'Phone',
             })
         }else {
             try {
