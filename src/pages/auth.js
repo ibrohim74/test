@@ -23,7 +23,6 @@ const Auth = observer(() => {
                 data = await registration(email, password);
             }
             history(ADMIN_ROUTE);
-            user.setUser(user);
             user.setIsAuth(true)
         } catch (e) {
             alert(e.response.data.message)

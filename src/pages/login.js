@@ -1,22 +1,33 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {login} from "../http/userAPI";
 import {ADMIN_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE} from "../utils/consts";
 import {Link, useNavigate} from "react-router-dom";
-import {Context} from "../index";
 import {Button, Col, Form, Row} from "react-bootstrap";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
+import {$host} from "../http";
+import {observer} from "mobx-react-lite";
+import { useUser } from '../constructor/UserContext'
+import CryptoJS from 'crypto-js';
+
 
 const Login = () => {
+    const user = useUser();
     const [username , setUsername] = useState('');
     const [password , setPassword] = useState('');
-    const {user} = useContext(Context)
-
     const history = useNavigate();
-
     const click = async ()=>{
         try {
-            await login(username, password);
-            user.setIsAuth(true);
+            const { data } = await $host.post('api/v1/login', { username, password });
+            localStorage.setItem('token', data.tokens.access);
+            localStorage.setItem('refreshToken', data.tokens.refresh);
+            localStorage.setItem('uuid', data.user.id);
+            const encryptedUserData = CryptoJS.AES.encrypt(
+                JSON.stringify(data.user),
+                'nfcGlobal'
+            ).toString();
+            localStorage.setItem('user',encryptedUserData);
+            window.location.assign('/admin')
+            console.log(user)
         }catch (e) {
             alert(e)
         }

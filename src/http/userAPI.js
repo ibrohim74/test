@@ -2,8 +2,6 @@ import {$authHost, $host} from "./index";
 import jwt_decode from "jwt-decode";
 import Admin from "../pages/admin/admin";
 
-
-
 export const registration = async (sendData) => {
     console.log(sendData)
     try {
@@ -21,7 +19,7 @@ export const login = async (username, password) => {
     localStorage.setItem('token', data.tokens.access);
     localStorage.setItem('refreshToken', data.tokens.refresh);
     localStorage.setItem('uuid', data.user.id);
-    return window.location.assign('/admin')
+    window.location.assign('/admin')
 };
 
 export const check = async () => {

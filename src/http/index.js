@@ -8,7 +8,6 @@ const $host = axios.create({
 const $authHost = axios.create({
     baseURL: 'http://127.0.0.1:8000',
 })
-console.log(process.env.REA)
 
 $authHost.interceptors.request.use(
     (config) => {

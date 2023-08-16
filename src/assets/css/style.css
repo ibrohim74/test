@@ -136,20 +136,20 @@ body{
     inset 5px -5px 10px #ffffff;
 }
 .content-adminPage{
+    float: right;
     width: 78%;
     height: 100%;
     background: #e0e0e0;
-
-
-    position: relative;
-    right: -21%;
-    bottom: -125px;
+    position: absolute;
+    right: -2%;
+    /* left: 0; */
+    bottom: -100px;
     z-index: 1;
     padding: 10px;
 }
 
 Table{
-    width: 70% !important;
+    width: 100% !important;
     text-align: center;
 }
 .user-list{

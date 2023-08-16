@@ -85,7 +85,7 @@ const AdminProfile = () => {
 
     }
     return (
-        <div style={{marginLeft:'21px'}} >
+        <div style={{marginLeft:'21px', marginRight:"21px"}} >
             {contextHolder}
             <Container>
                 <Row >

@@ -4,7 +4,7 @@ import {makeAutoObservable} from "mobx";
 export default class UserConstructor{
     constructor(){
         this._isAuth =false;
-        this._user = {};
+        this._user = [];
         makeAutoObservable(this)
     }
 
