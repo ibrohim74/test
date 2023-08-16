@@ -7,24 +7,24 @@ import {data} from "./db";
 
 
 const AppRout = observer(() => {
-        const local = localStorage.getItem('token');
-        return (
-            <Routes>
+    const local = localStorage.getItem('token');
+    return (
+        <Routes>
 
-                {
-                    publicRoute.map(({path, Component}) => <Route key={path} path={path} element={Component} exact/>)
-                }
-                { local && adminDash.map(({path, Component}) => <Route key={path} path={path + "/*"} element={Component}/>)}
+            {
+                publicRoute.map(({path, Component}) => <Route key={path} path={path} element={Component} exact/>)
+            }
+            { local && adminDash.map(({path, Component}) => <Route key={path} path={path + "/*"} element={Component}/>)}
 
 
-                    <Route  exact path={`/:username`} element={<UserPageContact/>} />
+            <Route  exact path={`/:username`} element={<UserPageContact/>} />
 
-                <Route
-                    path="*"
-                    element={<Navigate to="/" replace />}
-                />
-            </Routes>
-        );
-    });
+            <Route
+                path="*"
+                element={<Navigate to="/" replace />}
+            />
+        </Routes>
+    );
+});
 
-    export default AppRout;
+export default AppRout;

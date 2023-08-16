@@ -252,18 +252,18 @@ const Registration = () => {
                                     }}
                                 />
                             </FloatingLabel><FloatingLabel
-                                controlId="floatingInput"
-                                label="Role"
-                                className="mb-4"
-                            >
-                                <Form.Control
-                                    type="text"
-                                    placeholder="hello from work info"
-                                    onChange={(e) => {
-                                        setRegData({...regData , work_info:{...regData.work_info , role:e.target.value}});
-                                    }}
-                                />
-                            </FloatingLabel>
+                            controlId="floatingInput"
+                            label="Role"
+                            className="mb-4"
+                        >
+                            <Form.Control
+                                type="text"
+                                placeholder="hello from work info"
+                                onChange={(e) => {
+                                    setRegData({...regData , work_info:{...regData.work_info , role:e.target.value}});
+                                }}
+                            />
+                        </FloatingLabel>
                         </Col>
                     </Row>
                     <Row>
@@ -284,48 +284,48 @@ const Registration = () => {
                                 />
                             </FloatingLabel>
 
-                          <FloatingLabel
-                              controlId="floatingInput"
-                              label="Street"
-                              className="mb-4"
-                          >
-                            <Form.Control
-                                type="text"
-                                placeholder="hello from address"
-                                // value={regData.address.street}
-                                onChange={(e) => {
-                                  setRegData({...regData , address:{...regData.address ,street:e.target.value}});
-                                }}
-                            />
-                          </FloatingLabel>
-                          <FloatingLabel
-                              controlId="floatingInput"
-                              label="Region"
-                              className="mb-4"
-                          >
-                            <Form.Control
-                                type="text"
-                                placeholder="hello from address"
-                                // value={regData.address.region}
-                                onChange={(e) => {
-                                  setRegData({...regData , address:{...regData.address,region:e.target.value}});
-                                }}
-                            />
-                          </FloatingLabel>
-                          <FloatingLabel
-                              controlId="floatingInput"
-                              label="Country"
-                              className="mb-4"
-                          >
-                            <Form.Control
-                                type="text"
-                                placeholder="hello from address"
-                                // value={regData.address.country}
-                                onChange={(e) => {
-                                  setRegData({...regData , address:{...regData.address,country:e.target.value}});
-                                }}
-                            />
-                          </FloatingLabel>
+                            <FloatingLabel
+                                controlId="floatingInput"
+                                label="Street"
+                                className="mb-4"
+                            >
+                                <Form.Control
+                                    type="text"
+                                    placeholder="hello from address"
+                                    // value={regData.address.street}
+                                    onChange={(e) => {
+                                        setRegData({...regData , address:{...regData.address ,street:e.target.value}});
+                                    }}
+                                />
+                            </FloatingLabel>
+                            <FloatingLabel
+                                controlId="floatingInput"
+                                label="Region"
+                                className="mb-4"
+                            >
+                                <Form.Control
+                                    type="text"
+                                    placeholder="hello from address"
+                                    // value={regData.address.region}
+                                    onChange={(e) => {
+                                        setRegData({...regData , address:{...regData.address,region:e.target.value}});
+                                    }}
+                                />
+                            </FloatingLabel>
+                            <FloatingLabel
+                                controlId="floatingInput"
+                                label="Country"
+                                className="mb-4"
+                            >
+                                <Form.Control
+                                    type="text"
+                                    placeholder="hello from address"
+                                    // value={regData.address.country}
+                                    onChange={(e) => {
+                                        setRegData({...regData , address:{...regData.address,country:e.target.value}});
+                                    }}
+                                />
+                            </FloatingLabel>
 
 
 

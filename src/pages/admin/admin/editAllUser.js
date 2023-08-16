@@ -72,7 +72,7 @@ const EditAllUser = () => {
         setUpdateUser({...updateUser , birthday: dateString})
     };
 
-console.log()
+    console.log()
     const sendNewUser = async ()=> {
         if (createUser.username ==='' || createUser.username === undefined){
             messageApi.open({

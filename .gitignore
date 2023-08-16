@@ -1,8 +1,4 @@
+datatypes w = "http://whattf.org/datatype-draft"
 node_modules
+.gitignore
 .env
-# #####################################################################
-##  RELAX NG Schema for HTML 5: Basic Prose Markup                    #
-# #####################################################################
-
-# #####################################################################
-## Paragraph-Leve

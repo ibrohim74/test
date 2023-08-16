@@ -298,16 +298,16 @@ const UserProfile = () => {
                     </Col>
                 </Row>
                 <Col>
-                <Button onClick={handleSend}>send</Button>
-            </Col>
+                    <Button onClick={handleSend}>send</Button>
+                </Col>
             </Container>
 
-        <>
-            {contextHolder}
+            <>
+                {contextHolder}
 
-        </>
-</div>
-);
+            </>
+        </div>
+    );
 };
 
 export default UserProfile;

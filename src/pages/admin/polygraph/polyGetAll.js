@@ -74,60 +74,60 @@ const PolyGetAll = () => {
         getOrderList()
     }, [])
 
-console.log(dataOrder)
+    console.log(dataOrder)
     return (
         <>
             {contextHolder}
             <Container>
 
 
-            <Table>
-                <thead>
-                <th>
-                    IDUser
-                </th>
-                <th>
-                    Username
-                </th>
-                <th>created</th>
-                <th>QR</th>
-                <th>Status</th>
-                <th>change Status</th>
-                </thead>
-                <tbody>
-                {dataOrder.map((item) => {
-                     return <>
-                         {item.user ? <tr key={item.user.id}>
-                             <td>{item.user.id}</td>
-                             <td>{item.user.username}</td>
-                             <td>{item.updated_at.substring(0, 10)}</td>
-                             <td>
-                                 <div id={"qr-" + item.user.username}>
-                                     <QRCode
-                                         value={window.location.protocol + "//" + window.location.hostname + "/" + item.user.username}/>
-                                 </div>
-                                 <Button onClick={() => downloadQR(item.user.username)}>
-                                     Download
-                                 </Button>
-                             </td>
-                             <td>
-                                 {item.status}
+                <Table>
+                    <thead>
+                    <th>
+                        IDUser
+                    </th>
+                    <th>
+                        Username
+                    </th>
+                    <th>created</th>
+                    <th>QR</th>
+                    <th>Status</th>
+                    <th>change Status</th>
+                    </thead>
+                    <tbody>
+                    {dataOrder.map((item) => {
+                        return <>
+                            {item.user ? <tr key={item.user.id}>
+                                <td>{item.user.id}</td>
+                                <td>{item.user.username}</td>
+                                <td>{item.updated_at.substring(0, 10)}</td>
+                                <td>
+                                    <div id={"qr-" + item.user.username}>
+                                        <QRCode
+                                            value={window.location.protocol + "//" + window.location.hostname + "/" + item.user.username}/>
+                                    </div>
+                                    <Button onClick={() => downloadQR(item.user.username)}>
+                                        Download
+                                    </Button>
+                                </td>
+                                <td>
+                                    {item.status}
 
-                             </td>
-                             <td>
-                                 <Button type="primary" onClick={()=>showModal(item.user.id , item.id)}>
-                                     change status
-                                 </Button>
-                             </td>
+                                </td>
+                                <td>
+                                    <Button type="primary" onClick={()=>showModal(item.user.id , item.id)}>
+                                        change status
+                                    </Button>
+                                </td>
 
-                         </tr> : <></>}
+                            </tr> : <></>}
 
 
-                    </>
-                })}
+                        </>
+                    })}
 
-                </tbody>
-            </Table>
+                    </tbody>
+                </Table>
 
                 <Modal title="change status" open={isModalOpen} onCancel={handleCancel}>
                     <select id={'status'}>

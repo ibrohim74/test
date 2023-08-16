@@ -15,11 +15,10 @@ const userStore = new UserConstructor();
 
 
 root.render(
-    <React.StrictMode>
-        <UserContext.Provider value={userStore}>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
-        </UserContext.Provider>
-</React.StrictMode>);
-
+	<React.StrictMode>
+		<UserContext.Provider value={userStore}>
+			<BrowserRouter>
+				<App />
+			</BrowserRouter>
+		</UserContext.Provider>
+	</React.StrictMode>);

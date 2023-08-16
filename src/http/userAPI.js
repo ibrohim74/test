@@ -38,4 +38,3 @@ export const logOut = async ()=>{
     localStorage.clear()
     return window.location.assign('/')
 };
-

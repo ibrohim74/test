@@ -69,10 +69,10 @@ const Admin = observer(() => {
                     {typeUser() === 'ADMIN' &&
                     (<ul>
                         <li>
-                        <Link to={PROFILE_ADMIN}>
-                            Profile
-                        </Link>
-                    </li>
+                            <Link to={PROFILE_ADMIN}>
+                                Profile
+                            </Link>
+                        </li>
                         <li>
                             <Link to={STATISTIC}>
                                 Statistic
